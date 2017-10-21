@@ -10,15 +10,15 @@
 | Português vs. inglês  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Por trás do panos     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***02 – Variáveis, Valores & Tipos***
-| Go Playground                 | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
-| Hello world!                  | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
-| Operador curto de declaração  | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
-| A palavra-chave var           | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
-| Explorando tipos              | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
-| Valor zero                    | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
-| O pacote fmt                  | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
-| Criando seu próprio tipo      | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
-| Conversão, não coerção        | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
+| Go Playground                 | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Hello world!                  | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Operador curto de declaração  | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| A palavra-chave var           | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Explorando tipos              | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Valor zero                    | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| O pacote fmt                  | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Criando seu próprio tipo      | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
+| Conversão, não coerção        | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
 | ***03 – Exercícios: Ninja Nível 1***
 | Contribua seu código      | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
