@@ -137,21 +137,21 @@
 | Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***16 – Aplicação***
-| Documentação JSON             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| JSON marshal (ordenação)      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| JSON unmarshal (desordenação) | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A interface Writer            | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| O pacote sort                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Customizando o sort           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| bcrypt                        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Documentação JSON             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| JSON marshal (ordenação)      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| JSON unmarshal (desordenação) | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| A interface Writer            | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| O pacote sort                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Customizando o sort           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| bcrypt                        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***17 – Exercícios: Ninja Nível 8***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***18 – Concorrência***
-| Concorrência vs. paralelismo  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Concorrência vs. paralelismo  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | WaitGroup                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Conjuntos de métodos, parte 2 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Documentação                  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |

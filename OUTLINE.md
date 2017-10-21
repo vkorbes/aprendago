@@ -1190,66 +1190,157 @@ Take the code from the previous exercise, then store the values of type person i
 - Use a função mudeMe e demonstre o resultado.
 - Solução: 
 
-## 16 – Aplicação
+## 16 – Aplicações
 
 ### Documentação JSON
 
+- Jǻ entendemos ponteiros, já entendemos métodos. Já temos o conhecimento necessário para começar a utilizar a standard library.
+- Nesse vídeo faremos uma orientação sobre como abordar a documentação.
+- Essa aula não foi preparada. Vai ser tudo ao vivo no improviso pra vocês verem como funciona o processo.
+    - golang.org → Documents → Package Documentation 
+    - godoc.org → encoding/json
+        - files
+        - examples
+        - funcs
+        - types
+        - methods
 - Go Playground: 
 
 ### JSON marshal (ordenação)
 
+- Exemplo: transformando structs em Go em código JSON.
+- No improviso tambem.
 - Go Playground: 
 
 ### JSON unmarshal (desordenação)
 
+- E agora o contrário.
+- Link: https://cdn.rawgit.com/GoesToEleven/golang-web-dev/17e3852d/040_json/README.html
+- JSON-to-Go
+- Tags
+- Marshal/unmarshal vs. encoder/decoder
+    - Marshal vai pra uma variável
+    - Encoder "vai direto"
 - Go Playground: 
 
 ### A interface Writer
 
+- A interface writer do pacote io.
+- type Writer interface { Write(p []byte) (n int, err error) }
+    - pkg os:   func (f *File) Write(b []byte) (n int, err error)
+    - pkg json: func NewEncoder(w io.Writer) *Encoder
+- "Println [...] writes to standard output."
+    - func Println [...] return Fprintln(os.Stdout, a...)
+    - func Fprintln(w io.Writer, a ...interface{}) (n int, err error)
+    - Stdout: NewFile(uintptr(syscall.Stdout), "/dev/stdout") (Google: Standard streams)
+    - func NewFile(fd uintptr, name string) *File
+    - func (f *File) Write(b []byte) (n int, err error)
+- Exemplo:
+    - Println
+    - Fprintln os.Stdout
+    - io.WriteString os.Stdout
+    - Ou:
+        - func Dial(network, address string) (Conn, error)
+        - type Conn interface { [...] Write(b []byte) (n int, err error) [...] }
 - Go Playground: 
 
 ### O pacote sort
 
+- Sort serve para ordenar slices.
+    - Como faz?
+    - golang.org/pkg/ → sort
+    - godoc.org/sort → examples
+    - Sort altera o valor original!
+- Exemplo: Ints, Strings.
 - Go Playground: 
 
 ### Customizando o sort
 
+- O sort que eu quero não existe. Quero fazer o meu.
+- Para isso podemos usar o func Sort do package sort. Vamos precisar de um sort.Interface.
+    - type Interface interface { Len() int; Less(i, j int) bool; Swap(i, j int) }
+- Ou seja, se tivermos um tipo que tenha esses métodos, ao executar sort.Sort(x) as funções que vão rodar são as minhas, não as funções pré-prontas como no exercício anterior.
+- E aí posso fazer do jeito que eu quiser.
+- Exemplo:
+    - struct carros: nome, consumo, potencia
+    - slice []carros{carro1, carro2, carro3} (Sort ordena *slices!*)
+    - tipo ordenarPorPotencia
+    - tipo ordenarPorConsumo
+    - tipo ordenarPorLucroProDonoDoPosto
 - Go Playground: 
 
 ### bcrypt
 
-- Go Playground: 
+- É uma maneira de encriptar senhas utilizando hashes.
+- x/crypto/bcrypt
+    - GenerateFromPassword
+    - CompareHashAndPassword
+- Sem Go Playground!
+    - go get golang.org/x/crypto/bcrypt
 
 ## 17 – Exercícios: Ninja Nível 8
 
 ### Na prática: exercício #1
 
+- Partindo do código abaixo, utilize marshal para transformar []user em JSON.
+    - https://play.golang.org/p/U0jea43X55
+- Atenção! Tem pegadinha aqui.
 - Solução: 
 
 ### Na prática: exercício #2
 
+- Partindo do código abaixo, utilize unmarshal e demonstre os valores.
+    - https://play.golang.org/p/b_UuCcZag9
+- Dica: JSON-to-Go.
 - Solução: 
 
 ### Na prática: exercício #3
 
+- Partindo do código abaixo, utilize NewEncoder() e Encode() para enviar as informações como JSON para Stdout.
+    - https://play.golang.org/p/BVRZTdlUZ_
+- A gente não viu isso nas aulas. O exercício é descobrir como as coisas funcionam.
+- Desafio: descubra o que é, e utilize, method chaining para conectar os dois métodos acima.
 - Solução: 
 
 ### Na prática: exercício #4
 
+- Partindo do código abaixo, ordene a []int e a []string de cada pessoa.
+    - https://play.golang.org/p/H_q75mpmHW
 - Solução: 
 
 ### Na prática: exercício #5
 
+- Partindo do código abaixo, ordene os []user por idade e sobrenome.
+    - https://play.golang.org/p/BVRZTdlUZ_
+- Os valores no campo Sayings devem ser ordenados tambem, e demonstrados de maneira esteticamente harmoniosa.
 - Solução: 
 
 ## 18 – Concorrência
 
 ### Concorrência vs. paralelismo
 
-- Go Playground: 
+- Concorrência é quando abre uma padaria do lado da outra e as duas quebram :)
+- Fun facts: 
+    - O primeiro CPU dual core "popular" veio em 2006
+    - Em 2007 o Google começou a criar a linguagem Go para utilizar essa vantagem
+    - Go foi a primeira linguagem criada com multi-cores em mente
+    - C, C++, C#, Java, JavaScript, Python, etc., foram todas criadas antes de 2006
+    - Ou seja, Go tem uma abordagem única (fácil!) para este tópico
+- E qual a diferença entre concorrência e paralelismo?
 
 ### WaitGroup
 
+- Um WaitGroup serve para esperar que uma coleção de goroutines termine sua execução.
+- O que são goroutines? São threads.
+- O que são threads? https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)
+- Na prática: go func.
+- E wait groups? sync.WaitGroup:
+    - func Add: "Quantas goroutines?"
+    - func Done: "Deu!"
+    - func Wait: "Espera todo mundo terminar."
+- Race condition: https://goo.gl/JSC7M2 
+- Ponto de partida: https://play.golang.org/p/bnI0akWF9f
+- Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
 - Go Playground: 
 
 ### Conjuntos de métodos, parte 2
