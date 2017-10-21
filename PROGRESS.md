@@ -1,22 +1,15 @@
-
-# Outline
-
-
-## 01 – Visão Geral do Curso
+# Progress
 
 | Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***01 – Visão Geral do Curso***
 | Por que Go?           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Sucesso               | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Recursos do curso     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Documentação          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Português vs. inglês  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Por trás do panos     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 02 – Variáveis, Valores & Tipos
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***02 – Variáveis, Valores & Tipos***
 | Go Playground                 | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
 | Hello world!                  | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
 | Operador curto de declaração  | ☑ | ☑ | ☑ | ☑ | ☑ | ☐ |
@@ -26,10 +19,7 @@
 | O pacote fmt                  | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
 | Criando seu próprio tipo      | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
 | Conversão, não coerção        | ☑ | ☑ | ☑ | ☑ | ☑ | ☑ |
-
-## 03 – Exercícios: Ninja Nível 1
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***03 – Exercícios: Ninja Nível 1***
 | Contribua seu código      | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
@@ -37,10 +27,7 @@
 | Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-
-## 04 – Fundamentos da Programação
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***04 – Fundamentos da Programação***
 | Tipo booleano                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Como os computadores funcionam        | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Tipos numéricos                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
@@ -49,10 +36,7 @@
 | Constantes                            | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Iota                                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Deslocamento de bits                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-
-## 05 – Exercícios: Ninja Nível 2
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***05 – Exercícios: Ninja Nível 2***
 | Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
@@ -60,10 +44,7 @@
 | Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #7  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-
-## 06 – Fluxo de Controle
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***06 – Fluxo de Controle***
 | Entendendo fluxo de controle                              | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Loops: inicialização, condição, pós                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Loops: nested loop (repetição hierárquica)                | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
@@ -74,12 +55,9 @@
 | Condicionais: if, else if, else                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Loops, condicionais, e operação módulo                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Condicionais: a declaração switch                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condicionais: a declaração switch pt. 2 & documentação    | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Condicionais: a declaração switch pt. 2                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Operadores lógicos condicionais                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-
-## 07 – Exercícios: Ninja Nível 3
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***07 – Exercícios: Ninja Nível 3***
 | Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
@@ -90,10 +68,7 @@
 | Na prática: exercício #8  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #9  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Na prática: exercício #10 | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-
-## 08 – Agrupamentos de Dados
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***08 – Agrupamentos de Dados***
 | Array                                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Slice: literal composta               | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Slice: for range                      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -106,62 +81,42 @@
 | Maps: introdução                      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Maps: adicionando elementos & range   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Maps: deletando                       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 09 – Exercícios: Ninja Nível 4
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #8  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #9  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #10 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 10 – Structs
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Struct                    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Structs embutidos         | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Lendo a documentação      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Structs anônimos          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| ***09 – Exercícios: Ninja Nível 4***
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #8  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #9  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #10 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| ***10 – Structs***
+| Struct                    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Structs embutidos         | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Lendo a documentação      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Structs anônimos          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Colocando ordem na casa   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 11 – Exercícios: Ninja Nível 5
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 12 – Funções
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Sintaxe                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Parâmetro variádico       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Desenrolando uma slice    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Defer                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Métodos                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Interfaces & polimorfismo | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Funções anônimas          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Func como expressão       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Retornando uma função     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Callback                  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Closure                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Recursividade             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 13 – Exercícios: Ninja Nível 6
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***11 – Exercícios: Ninja Nível 5***
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| ***12 – Funções***
+| Sintaxe                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Parâmetro variádico       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Desenrolando uma slice    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Defer                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Métodos                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Interfaces & polimorfismo | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Funções anônimas          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Func como expressão       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Retornando uma função     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Callback                  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Closure                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Recursividade             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| ***13 – Exercícios: Ninja Nível 6***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -174,26 +129,14 @@
 | Na prática: exercício #10 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #11 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #12 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 14 – Ponteiros
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***14 – Ponteiros***
 | O que são ponteiros?  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Quando usar ponteiros | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Conjuntos de métodos  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 15 – Exercícios: Ninja Nível 7
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***15 – Exercícios: Ninja Nível 7***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 16 – Aplicação
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***16 – Aplicação***
 | Documentação JSON             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | JSON marshal (ordenação)      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | JSON unmarshal (desordenação) | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -201,21 +144,13 @@
 | O pacote sort                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Customizando o sort           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | bcrypt                        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 17 – Exercícios: Ninja Nível 8
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***17 – Exercícios: Ninja Nível 8***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 18 – Concorrência
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***18 – Concorrência***
 | Concorrência vs. paralelismo  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | WaitGroup                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Conjuntos de métodos, parte 2 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -223,11 +158,7 @@
 | Condição de corrida           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Mutex                         | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Atomic                        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 19 – Seu Ambiente de Desenvolvimento
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***19 – Seu Ambiente de Desenvolvimento***
 | O terminal                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Bash no Windows           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Instalando Go             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -239,11 +170,7 @@
 | Explorando o GitHub       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Compilação cruzada        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Pacotes                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 20 – Exercícios: Ninja Nível 9
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***20 – Exercícios: Ninja Nível 9***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -251,11 +178,7 @@
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 21 – Canais
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***21 – Canais***
 | Entendendo canais     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Canais direcionais    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Utilizando canais     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -265,11 +188,7 @@
 | Convergência          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Divergência           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Context               | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 22 – Exercícios: Ninja Nível 10
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***22 – Exercícios: Ninja Nível 10***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -277,45 +196,29 @@
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-
-## 23 – Tratamento de Erros
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***23 – Tratamento de Erros***
 | Entendendo erros                  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Verificando erros                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Print & log                       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Recover                           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Erros com informações adicionais  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 24 – Exercícios: Ninja Nível 11
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***24 – Exercícios: Ninja Nível 11***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 25 – Escrevendo Documentação
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***25 – Escrevendo Documentação***
 | Introdução                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | go doc                    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | godoc                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | godoc.org                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Escrevendo documentação   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 26 – Exercícios: Ninja Nível 12
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***26 – Exercícios: Ninja Nível 12***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 27 – Testes & Benchmarking
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***27 – Testes & Benchmarking***
 | Introdução                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Testes em tabela          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Testes como exemplos      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -324,15 +227,9 @@
 | Cobertura                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Exemplos de benchmarks    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Revisão                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 28 – Exercícios: Ninja Nível 13
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***28 – Exercícios: Ninja Nível 13***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-
-## 29 – Considerações Finais
-| Video | Outline | Record | Edit 1 | Edit 2 | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| ***29 – Considerações Finais***
 | Buh-bye!  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
