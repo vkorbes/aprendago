@@ -117,25 +117,25 @@
 | Closure                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Recursividade             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***13 – Exercícios: Ninja Nível 6***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #8  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #9  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #10 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #11 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #12 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #8  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #9  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #10 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #11 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #12 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***14 – Ponteiros***
-| O que são ponteiros?  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Quando usar ponteiros | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Conjuntos de métodos  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| O que são ponteiros?  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Quando usar ponteiros | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Conjuntos de métodos  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***15 – Exercícios: Ninja Nível 7***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***16 – Aplicação***
 | Documentação JSON             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | JSON marshal (ordenação)      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
