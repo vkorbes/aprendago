@@ -20,54 +20,54 @@
 | Criando seu próprio tipo      | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
 | Conversão, não coerção        | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
 | ***03 – Exercícios: Ninja Nível 1***
-| Contribua seu código      | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Contribua seu código      | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***04 – Fundamentos da Programação***
-| Tipo booleano                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Como os computadores funcionam        | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Tipos numéricos                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Tipo string (cadeias de caracteres)   | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Sistemas numéricos                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Constantes                            | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Iota                                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Deslocamento de bits                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Tipo booleano                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Como os computadores funcionam        | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Tipos numéricos                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Tipo string (cadeias de caracteres)   | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Sistemas numéricos                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Constantes                            | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Iota                                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Deslocamento de bits                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***05 – Exercícios: Ninja Nível 2***
-| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #7  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***06 – Fluxo de Controle***
-| Entendendo fluxo de controle                              | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops: inicialização, condição, pós                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops: nested loop (repetição hierárquica)                | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops: a declaração for                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops: break & continue                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops: utilizando ascii                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condicionais: a declaração if                             | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condicionais: if, else if, else                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Loops, condicionais, e operação módulo                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condicionais: a declaração switch                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condicionais: a declaração switch pt. 2                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Operadores lógicos condicionais                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Entendendo fluxo de controle                              | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops: inicialização, condição, pós                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops: nested loop (repetição hierárquica)                | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops: a declaração for                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops: break & continue                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops: utilizando ascii                                   | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Condicionais: a declaração if                             | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Condicionais: if, else if, else                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Loops, condicionais, e operação módulo                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Condicionais: a declaração switch                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Condicionais: a declaração switch pt. 2                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☑ |
+| Operadores lógicos condicionais                           | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***07 – Exercícios: Ninja Nível 3***
-| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #8  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #9  | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Na prática: exercício #10 | ☑ | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #7  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #8  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #9  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Na prática: exercício #10 | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***08 – Agrupamentos de Dados***
 | Array                                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Slice: literal composta               | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -152,61 +152,61 @@
 | Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***18 – Concorrência***
 | Concorrência vs. paralelismo  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| WaitGroup                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Conjuntos de métodos, parte 2 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Documentação                  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Condição de corrida           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Mutex                         | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Atomic                        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| WaitGroup                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Conjuntos de métodos, parte 2 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Documentação                  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Condição de corrida           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Mutex                         | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Atomic                        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***19 – Seu Ambiente de Desenvolvimento***
-| O terminal                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Bash no Windows           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Instalando Go             | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Go workspace              | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Environment variables     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| IDE's                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Comandos Go               | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Repositórios no GitHub    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Explorando o GitHub       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Compilação cruzada        | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Pacotes                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| O terminal                | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Bash no Windows           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Instalando Go             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Go workspace              | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Environment variables     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| IDE's                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Comandos Go               | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Repositórios no GitHub    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Explorando o GitHub       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Compilação cruzada        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Pacotes                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***20 – Exercícios: Ninja Nível 9***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***21 – Canais***
-| Entendendo canais     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Canais direcionais    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Utilizando canais     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Range                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Select                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A expressão comma ok  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Convergência          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Divergência           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Context               | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Entendendo canais     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Canais direcionais    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Utilizando canais     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Range                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Select                | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| A expressão comma ok  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Convergência          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Divergência           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Context               | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***22 – Exercícios: Ninja Nível 10***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***23 – Tratamento de Erros***
-| Entendendo erros                  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Verificando erros                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Print & log                       | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Recover                           | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Erros com informações adicionais  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Entendendo erros                  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Verificando erros                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Print & log                       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Recover                           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Erros com informações adicionais  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***24 – Exercícios: Ninja Nível 11***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***25 – Escrevendo Documentação***
 | Introdução                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |

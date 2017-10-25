@@ -1165,8 +1165,18 @@ Take the code from the previous exercise, then store the values of type person i
 ### Conjuntos de métodos
 
 - Conjuntos de métodos são conjuntos de métodos :)
-- Um receiver não-ponteiro recebe tanto pointeiros como não-ponteiros.
+    - https://golang.org/ref/spec#Method_sets
+- "The method set of any other type T consists of all methods declared with receiver type T. The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T)."
+- Um receiver não-ponteiro recebe tanto ponteiros como não-ponteiros.
 - Um receiver ponteiro recebe somente ponteiros.
+    - Documentação:
+    - tipo (t T)    → receiver (t T)
+    - tipo (t *T)   → receivers (t *T) ou (t T)
+    - Ou seja:
+    - receiver (t T)  ← tipos (t T) ou (t *T)
+    - receiver (t *T) ← tipo (t *T)
+- "The method set of a type determines the interfaces that the type implements [...]"
+- Exemplo: interfaces em gobyexample.com
 - Go Playground: 
 
 ## 15 – Exercícios: Ninja Nível 7
@@ -1328,223 +1338,599 @@ Take the code from the previous exercise, then store the values of type person i
     - Ou seja, Go tem uma abordagem única (fácil!) para este tópico
 - E qual a diferença entre concorrência e paralelismo?
 
-### WaitGroup
+### Goroutines & WaitGroups
 
-- Um WaitGroup serve para esperar que uma coleção de goroutines termine sua execução.
+- O código abaixo é linear. Como fazer as duas funções rodarem concorrentemente?
+    - https://play.golang.org/p/XP-ZMeHUk4
+- Goroutines!
 - O que são goroutines? São threads.
-- O que são threads? https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)
+- O que são threads? [WP](https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o))
 - Na prática: go func.
-- E wait groups? sync.WaitGroup:
+- Exemplo: código termina antes da go func executar.
+- Ou seja, precisamos de uma maneira pra "sincronizar" isso.
+- Ah, mas então... não.
+- Qualé então? sync.WaitGroup:
+- Um WaitGroup serve para esperar que uma coleção de goroutines termine sua execução.
     - func Add: "Quantas goroutines?"
     - func Done: "Deu!"
     - func Wait: "Espera todo mundo terminar."
-- Race condition: https://goo.gl/JSC7M2 
-- Ponto de partida: https://play.golang.org/p/bnI0akWF9f
+- Ah, mas então... sim!
 - Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
 - Go Playground: 
 
 ### Conjuntos de métodos, parte 2
 
+- Mas, mas...
+- Todos os métodos de WaitGroup tem ponteiros como receivers:
+    - type WaitGroup
+        - func (wg *WaitGroup) Add(delta int)
+        - func (wg *WaitGroup) Done()
+        - func (wg *WaitGroup) Wait()
+    - Então como é que usamos "var wg sync.WaitGroup"? Não deveria ser "var wg *sync.WaitGroup"?
+    - Como é que o jeito que usamos funciona?
+
+- Só pra reiterar:
+    - "The method set of any other type T consists of all methods declared with receiver type T. The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T)." — https://golang.org/ref/spec#Method_sets
+    - Um receiver não-ponteiro recebe tanto ponteiros como não-ponteiros.
+    - Um receiver ponteiro recebe somente ponteiros.
+        - Documentação:
+        - tipo (t T)    → receiver (t T)
+        - tipo (t *T)   → receivers (t *T) ou (t T)
+        - Ou seja:
+        - receiver (t T)  ← tipos (t T) ou (t *T)
+        - receiver (t *T) ← tipo (t *T)
+
+- Então?
+    - "The method set of a type determines the interfaces that the type implements [...]"
+    - Realmente sync.WaitGroup não possui métodos:
+        - wg := sync.WaitGroup{}; fmt.Println(reflect.TypeOf(wg).NumMethod()) → 0
+    - Enquanto que:
+        - wg := sync.WaitGroup{}; fmt.Println(reflect.TypeOf(&wg).NumMethod()) → 3
+    - E como que "var wg sync.WaitGroup; wg.Add(1)" funciona então?
+    - "If x is addressable and &x's method set contains m, x.m() is shorthand for (&x).m()." — https://golang.org/ref/spec#Calls
+
 - Go Playground: 
 
 ### Documentação
 
+- Agora vamos dar um mergulho na documentação:
+    - https://golang.org/doc/effective_go.html#concurrency
+    - https://pt.wikipedia.org/wiki/Multiplexador
+    - O que é yield? runtime.Gosched()
+- Race condition: 
+        *Função 1       var     Função 2*
+         Lendo: 0   →   0
+         Yield           0  →  Lendo: 0
+         var++: 1               Yield
+         Grava: 1   →   1      var++: 1
+                         1  ←  Grava: 1
+         Lendo: 1   ←   1
+         Yield           1  →  Lendo: 1
+         var++: 2               Yield
+         Grava: 2   →   2      var++: 2
+                         2  ←  Grava: 2
+- E é por isso que vamos ver mutex, atomic e, por fim, channels.
 - Go Playground: 
 
 ### Condição de corrida
 
+- Aqui vamos replicar a race condition mencionada no artigo anterior.
+    - time.Sleep(time.Second) vs. runtime.Gosched()
+- go help → go help build → go run -race main.go
+- Como resolver? Mutex.
 - Go Playground: 
 
 ### Mutex
 
+- Agora vamos resolver a race condition do programa anterior utilizando mutex.
+- Mutex é mutual exclusion, exclusão mútua.
+- Utilizando mutex somente uma thread poderá utilizar a variável contador de cada vez, e as outras deve aguardar sua vez "na fila."
+- Na prática:
+    - type Mutex
+        - func (m *Mutex) Lock()
+        - func (m *Mutex) Unlock()
+- RWMutex
 - Go Playground: 
 
 ### Atomic
 
+- Agora vamos fazer a mesma coisa, mas com atomic ao invés de mutex.
+    - atomic.AddInt64
+    - atomic.LoadInt64
 - Go Playground: 
 
 ## 19 – Seu Ambiente de Desenvolvimento
 
 ### O terminal
 
+- Terminologia:
+    - GUI: Graphical User Interface
+    - CLI: Command Line Interface
+        - Terminal, console, etc
+    - Unix, Linux, Mac:
+        - Shell, bash
+    - Windows:
+        Command prompt, cmd, dos prompt, powershell
+- Shell/bash commands:
+    - pwd
+    - ls
+        - ls -la
+        - Permissions: owner, group, world
+        - r, w, x → 4, 2, 1 (d = directory)
+        - rwxrwxrwx = owner, group, world
+    - touch
+    - clear
+    - chmod
+        - chmod options permissions filename
+        - chmod 777 arquivo.ext
+    - cd 
+        - cd ../
+        - cd qualquer/pasta/
+    - env
+    - rm  <file or folder name>
+        - rm -rf <file or folder name>
+    - .bash_profile & .bashrc
+        - .bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells. 
+        - When you login (type username and password) via console, either sitting at the machine, or remotely via ssh: .bash_profile is executed to configure your shell before the initial command prompt.
+    - nano <file name>
+    - cat <file name>
+    - grep
+        - cat temp2.txt | grep enter
+        - ls | grep -i documents
 
 
 ### Bash no Windows
 
-
+- Opção 1:
+    - https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
+- Opção 2:
+    - https://git-scm.com/
 
 ### Instalando Go
 
+- golang.org → download → checksum (shasum -a 256 /file.ext)
+    - go version
+    - go env
+    - go help
 
+### Go workspace & environment variables
 
-### Go workspace
-
-
-
-### Environment variables
-
-
+- $GOPATH/
+    bin/
+    pkg/
+    src/
+        github.com/
+            <Nome do usuário (github.com)>/
+                <Nome do projeto ou repo>/
+                <Nome do projeto ou repo>/
+                <Nome do projeto ou repo>/
+                <Nome do projeto ou repo>/
+                ...
+                <Nome do projeto ou repo>/
+- GOROOT: onde os binários da instalação do Go foram instalados
+    - GOROOT="/usr/lib/go"
+- GOPATH: onde seus arquivos de trabalho, seu workspace, fica localizado
+    - GOPATH="/home/ellen/go"
+    - export GOPATH=$HOME/go (.bashrc)
+- Package management? go get.
+    - Na prática → e.g. gouuid
 
 ### IDE's
 
-
+- Integrated development environment. WP: "[...] é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo."
+- IDEs:
+    - Visual Studio Code → https://code.visualstudio.com/
+        - go get -v github.com/nsf/gocode
+    - Gogland → https://www.jetbrains.com/go/ ($?)
+    - Atom → https://atom.io/
+    - Sublime → https://www.sublimetext.com/ ($)
+- Fontes:
+    - https://github.com/tonsky/FiraCode
+    - https://www.fsd.it/shop/fonts/pragmatapro/ ($)
 
 ### Comandos Go
 
-
+- go version
+- go env
+- go help
+- go fmt
+    - ./…
+- go run
+    - go run <file name>
+    - go run *.go
+- go build
+    - para um executável:
+        - gera o arquivo binário
+        - informa caso tenham havido erros
+        - caso não hajam erros, cria um executável e salva-o no diretório atual
+    - para um pacote:
+        - gera o arquivo
+        - informa caso tenham havido erros
+        - descarta o executável
+- go install
+    - para um executável:
+        - faz o build
+        - nomeia o arquivo com o nome do diretório atual
+        - salva o arquivo binário em $GOPATH/bin
+    - para um pacote:
+        - faz o build
+        - salva o arquivo binário em $GOPATH/pkg
+        - cria archive files (arquivo.a), os arquivos pré-compilados utilizados pelos imports
+- flags
+    - "-race"
 
 ### Repositórios no GitHub
 
-
+- Git foi feito pelo Linus Torvalds. O cara que criou o Linux.
+- GitHub, GitLab.
+- Como funciona?
+    - Vá em github.com e crie um repo
+    - Crie uma pasta com o mesmo nome no seu $GOPATH
+        - $GOPATH/src/github.com/<username>/<repo>
+    - Rode “git init” nesta pasta
+    - Adicione arquivos, e.g. README.md e .gitignore
+    - git add -A
+    - git commit -m “here’s some commit message”
+    - git remote add origin git@github.com:username/repo.git
+    - git push -u origin master
+- Comandos:
+    - git status
+    - git add --all
+    - git commit -m "mensagem"
+    - git push
 
 ### Explorando o GitHub
 
-
+- Clonando um repo
+    git clone <repo>
+- SSH
+    - Mac/Linux: ssh-keygen -t rsa
+        - id_rsa: Esta é sua chave privada, que fica no diretório ~/.ssh, e serve para verificar sua chave pública.
+        - id_rsa.pub: Esta é sua chave pública, que você pode compartilhar.
+    - Windows: Google :)
+- git remote
+    - git remote get-url origin
+    - git remote blablabla ← help
+- Truque sujo: apaga tudo e clona denovo. (Não recomendo se o repo tiver 4 GB...)
 
 ### Compilação cruzada
 
-
+- GOOS
+- GOARCH
+- `GOOS=darwin GOARCH=386 go build test.go`
+- https://godoc.org/runtime#pkg-constants
+- git push
+- git clone
+- go get
+- Exemplo: 
 
 ### Pacotes
 
-
+- Opção 1: uma pasta, vários arquivos.
+    - package declaration em todos os arquivos
+    - package scope: um elemento de um arquivo é acessível de todos os arquivos
+    - imports tem file scope
+- Exportado vs. não-exportado, ou seja, visível vs. não-vießivel
+    aka, visible / not visible
+    we don’t say (generally speaking): public / private
+    capitalization
+        capitalize: exported, visible outside the package
+        lowercase: unexported, not visible outside the package
+- Opção 2: separando por packages.
+    - pastas diferentes
+    - requer imports
+    - para usar: package.Função()
+- Exemplo: 
 
 ## 20 – Exercícios: Ninja Nível 9
 
 ### Na prática: exercício #1
 
+- Alem da goroutine principal, crie duas outras goroutines.
+- Cada goroutine adicional devem fazer um print separado.
+- Utilize waitgroups para fazer com que suas goroutines finalizem antes de o programa terminar.
 - Solução: 
 
 ### Na prática: exercício #2
 
+- Esse exercício vai reforçar seus conhecimentos sobre conjuntos de métodos.
+    - Crie um tipo para um struct chamado "pessoa"
+    - Crie um método "falar" para este tipo que tenha um receiver ponteiro (*pessoa)
+    - Crie uma interface, "humanos", que seja implementada por tipos com o método "falar"
+    - Crie uma função "dizerAlgumaCoisa" cujo parâmetro seja do tipo "humanos" e que chame o método "falar"
+    - Demonstre no seu código:
+        - Que você pode utilizar um valor do tipo "*pessoa" na função "dizerAlgumaCoisa"
+        - Que você não pode utilizar um valor do tipo "pessoa" na função "dizerAlgumaCoisa"
+- Se precisar de dicas, veja: https://gobyexample.com/interfaces
 - Solução: 
 
 ### Na prática: exercício #3
 
+- Utilizando goroutines, crie um programa incrementador:
+    - Tenha uma variável com o valor da contagem
+    - Crie um monte de goroutines, onde cada uma deve:
+        - Ler o valor do contador
+        - Salvar este valor
+        - Fazer yield da thread com runtime.Gosched()
+        - Incrementar o valor salvo
+        - Copiar o novo valor para a variável inicial
+    - Utilize WaitGroups para que seu programa não finalize antes de suas goroutines.
+    - Demonstre que há uma condição de corrida utilizando a flag -race
 - Solução: 
 
 ### Na prática: exercício #4
 
+- Utilize mutex para consertar a condição de corrida do exercício anterior.
 - Solução: 
 
 ### Na prática: exercício #5
 
+- Utilize atomic para consertar a condição de corrida do exercício anterior.
 - Solução: 
 
 ### Na prática: exercício #6
 
+- Crie um programa que demonstra seu OS e ARCH.
+- Rode-o com os seguintes comandos:
+    - go run
+    - go build
+    - go install
 - Solução: 
 
 ### Na prática: exercício #7
 
-- Solução: 
+- "If you do not leave your comfort zone, you do not remember the trip" — Brian Chesky
+- Faça download e instale: https://obsproject.com/
+- Escolha um tópico dos que vimos até agora. Sugestões:
+    - Motivos para utilizar Go
+    - Instalando Go
+    - Configurando as environment variables (e.g. GOPATH)
+    - Hello world
+    - go commands e.g. go help
+    - Variáveis
+    - O operador curto de declaração
+    - Constantes
+    - Loops
+        - init, cond, post
+        - break
+        - continue
+    - Funçõś
+    - func (receiver) identifier(params) (returns) { code }
+    - Métodos
+    - Interfaces
+    - Conjuntos de métodos
+    - Tipos
+        - Conversão?
+    - Concorrência vs. paralelismo
+    - Goroutines
+    - WaitGroups
+    - Mutex
+- Grave um vídeo onde *você* ensina o tópico em questão.
+- Faça upload do vídeo no YouTube.
+- Compartilhe o vídeo no Twitter e me marque no tweet (@ellenkorbes).
 
 ## 21 – Canais
 
 ### Entendendo canais
 
-
+- Canais são o Jeito Certo® de fazer sincronização e código concorrente.
+- Eles nos permitem trasmitir valores entre goroutines.
+- Servem pra coordenar, sincronizar, orquestrar, e buffering.
+- Na prática:
+    - make(chan type, b)
+    - <- 42
+	- <-c
+- Canais bloqueiam:
+    - Eles são como corredores em uma corrida de revezamento
+    - Eles tem que "passar o bastão" de maneira sincronizada
+    - Se um corredor tentar passar o bastão pro próximo, mas o próximo corredor não estiver lá...
+    - Ou se um corredor ficar esperando receber o bastão, mas ninguem entregar...
+    - ...não dá certo.
+- Exemplos:
+    - Poe um valor num canal e faz um print. Block.
+        - Código acima com goroutine.
+        - Ou com buffer. Via de regra: má idéia; é legal em certas situações, mas em geral é melhor sempre passar o bastão de maneira sincronizada.
+- Interessante: ref/spec → types
+- Código: 
 
 ### Canais direcionais
 
-
+- Tipo.
+- Canais bidirecionals (send & receive)
+    - send chan<-
+        error: "invalid operation: <-cs (receive from send-only type chan<- int)"
+    - receive <-chan
+        error: "invalid operation: cr <- 42 (send to receive-only type <-chan int)"
+- A seta sempre aponta para a esquerda.
+- Assignment/conversion: 
+    - de geral para específico
+    - de específico para geral não
+- Código: 
 
 ### Utilizando canais
 
-
+- Em funcs podemos especificar:
+    - receive channel
+        - Parâmetro receive channel: (c chan<- int)
+        - No scope dessa função, esse canal só recebe
+        - Não podemos fechar um receive channel
+    - send channel 
+        - Parâmetro send channel: (c <-chan int)
+        - No scope dessa função, esse canal só envia
+        - Podemos fechar um send channel
+- Exemplo: passando informação de uma função para outra.
+- Código: 
 
 ### Range
 
-
+- Range:
+    - gofunc com for loop com send e close(chan)
+    - recebe com range chan
+- Código: 
 
 ### Select
 
-
+- Na prática:
+    - gofunc send: for loop, pares vão pra pares<-, ímpares vão pra ímpares<-, acabou vai quit <- true
+    - func receive: select statement com canais como cases
+        - select é como switch, só que pra canais, e não é sequencial
+        - "A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready." — https://tour.golang.org/concurrency/5
+    - close? time.Sleep? 0, 0, 0?
+- Código: 
 
 ### A expressão comma ok
 
-
+- v, ok := <-chan
+- Se receber valor: v, true
+- Canal fechado, nada, etc.: zero v, false
+- Agora vamos resolver o problema do exercício anterior usando comma ok.
+- Código: 
 
 ### Convergência
 
-
+- Observamos convergência quando informação de vários canais é enviada a um número menor de canais.
+- Notação <- <-
+- Na prática:
+- Código: 
 
 ### Divergência
 
-
+- Divergência é o contrário de convergência :)
+- Na prática:
+- Código: 
 
 ### Context
 
+- Só pra ter uma idéia geral:
+- Se a gente lança 500 goroutines pra fazer uma tarefa, e cancelamos a tarefa no meio do caminho, como fazemos pra matar as goroutines?
+- https://blog.golang.org/context
+- Na prática:
+    - Documentação
+    - ctx := context.Background
+    - ctx, cancel = context.WithCancel(context.Background)
+    - goroutine: select case <-ctx.Done(): return; default: continua trabalhando.
+    - check ctx.Err(); cancel(); check ctx.Err()
+    - Tambem tem WithDeadline
 
+- Código: 
 
 ## 22 – Exercícios: Ninja Nível 10
 
 ### Na prática: exercício #1
 
+- Nível 10?! Êita! Parabéns!
+- Faça esse código funcionar: https://play.golang.org/p/j-EA6003P0
+    - Usando uma função anônima auto-executável
+    - Usando buffer
 - Solução: 
 
 ### Na prática: exercício #2
 
+- Faça esse código funcionar: https://play.golang.org/p/oB-p3KMiH6
+- Faça esse código funcionar: https://play.golang.org/p/mgw750EPp4
 - Solução: 
 
 ### Na prática: exercício #3
 
+- Utilizando este código: https://play.golang.org/p/sfyu4Is3FG
+- ...use um for range loop para demonstrar os valores do canal.
 - Solução: 
 
 ### Na prática: exercício #4
 
+- Utilizando este código: https://play.golang.org/p/MvL6uamrJP
+- ...use um select statement para demonstrar os valores do canal.
 - Solução: 
 
 ### Na prática: exercício #5
 
+- Utilizando este código: https://play.golang.org/p/YHOMV9NYKK
+- ...demonstre o comma ok idiom.
 - Solução: 
 
 ### Na prática: exercício #6
 
+- Escreva um programa que coloque 100 números em um canal, retire os números do canal, e demonstre-os.
 - Solução: 
 
 ### Na prática: exercício #7
 
+- Crie um programa que lance 10 goroutines onde cada uma envia 10 números a um canal;
+- Tire estes números do canal e demonstre-os.
 - Solução: 
 
 ## 23 – Tratamento de Erros
 
 ### Entendendo erros
 
-
+- Para quem já programa em outras linguagens:
+    - Em Go não temos exceções. → https://golang.org/doc/faq#exceptions
+    - Mais em: https://blog.golang.org/error-handling-and-go
+- package builtin, type error interface
+- package errors
+- Código: 
 
 ### Verificando erros
 
-
+- Na minha religião, underscore é pecado. Verifique seus erros.
+- Na prática:
+    - Exemplo 1: os.Create → strings.NewReader → io.Copy
+    - Exemplo 2: os.Open → io.ReadAll
+- Código: 
 
 ### Print & log
 
-
+- Opções:
+    - fmt.Println() → stdout
+    - log.Println() → timestamp + pode-se determinar onde o erro ficará logado
+    - log.Fatalln() → os.Exit(1) sem defer
+    - log.Panicln() → println + panic → funcões em defer rodam; dá pra usar recover
+    - panic()
+- Na prática: tentando abrir um arquivo inexistente e demonstrando todas as possibilidades acima.
+- Recomendação: use log.
+- Código: 
 
 ### Recover
 
-
+- https://blog.golang.org/defer-panic-and-recover 
+- Exemplo: https://play.golang.org/p/ZocncqtwaK
+- Código: 
 
 ### Erros com informações adicionais
 
-
+- Para que nossas funções retornem erros customizados, podemos utilizar:
+    - return errors.New()
+    - return fmt.Errorf() ← tem um errors.New() embutido, olha na fonte!
+    - https://golang.org/pkg/builtin/#error
+- “Error values in Go aren’t special, they are just values like any other, and so you have the entire language at your disposal.” - Rob Pike
+- Código: 
 
 ## 24 – Exercícios: Ninja Nível 11
 
 ### Na prática: exercício #1
 
+- Utilizando este código: https://play.golang.org/p/3W69TH4nON
+- ...remova o underscore e verifique e lide com o erro de maneira apropriada.
 - Solução: 
 
 ### Na prática: exercício #2
 
+- Utilizando este código: https://play.golang.org/p/9a1IAWy5E6
+- ...crie uma mensagem de erro customizada utilizando fmt.Errorf().
 - Solução: 
 
 ### Na prática: exercício #3
 
+- Crie um struct "erroEspecial" que implemente a interface builtin.error. 
+- Crie uma função que tenha um valor do tipo error como parâmetro. 
+- Crie um valor do tipo "erroEspecial" e passe-o para a função da instrução anterior.
+- (Para acessar campos do struct: error.campo não existe, portanto: error.(erroEspecial).campo)
 - Solução: 
 
 ### Na prática: exercício #4
 
+- Utilizando este código: https://play.golang.org/p/wlEM1tgfQD REFAZER
+- ...use o struct sqrt.Error como valor do tipo erro.
 - Solução: 
 
 ### Na prática: exercício #5
@@ -1555,23 +1941,72 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Introdução
 
-
+Before writing documentation, we are going to look at reading documentation. There are several things to know about documentation:
+    godoc.org
+        standard library and third party package documentation
+    golang.org
+        standard library documentation
+    go doc
+        command to read documentation at the command line
+    godoc
+        command to read documentation at the command line
+        also can run a local server showing documentation
 
 ### go doc
 
-
+- go help doc
+- go help doc -cmd cmd/doc
+go doc prints the documentation for a package, const, func, type, var, or method
+    go doc accepts zero, one, or two arguments.
+        zero
+            prints package documentation for the package in the current directory
+                go doc
+        one
+            argument Go-syntax-like representation of item to be documented
+                fyi: <sym> also known as “identifier”
+                    go doc <pkg> 
+                    go doc <sym>[.<method>] 
+                    go doc [<pkg>.]<sym>[.<method>] 
+                    go doc [<pkg>.][<sym>.]<method>
+                The first item in this list that succeeds is the one whose documentation is printed. If there is a symbol but no package, the package in the current directory is chosen. However, if the argument begins with a capital letter it is always assumed to be a symbol in the current directory.
+        two
+            first argument must be a full package path
+                go doc <pkg> <sym>[.<method>]
 
 ### godoc
-
-
+Godoc extracts and generates documentation for Go programs. It has two modes
+    without -http flag
+        command-line mode; prints text documentation to standard out and exits
+        -src flag
+            godoc prints the exported interface of a package in Go source form, or the implementation of a specific exported language 
+    with -http flag
+        runs as a web server and presents the documentation as a web page
+        godoc -http=:8080
+            http://localhost:8080/ 
 
 ### godoc.org
 
-
+put the url of your code into godoc
+    your documentation will appear on godoc
+    “refresh” at bottom of page if it is ever out of date
 
 ### Escrevendo documentação
 
-
+Documentation is a huge part of making software accessible and maintainable. Of course it must be well-written and accurate, but it also must be easy to write and to maintain. Ideally, it should be coupled to the code itself so the documentation evolves along with the code. The easier it is for programmers to produce good documentation, the better for everyone.
+    https://blog.golang.org/godoc-documenting-go-code 
+    godoc parses Go source code - including comments - and produces documentation as HTML or plain text. The end result is documentation tightly coupled with the code it documents. For example, through godoc's web interface you can navigate from a function's documentation to its implementation with one click.
+    comments are just good comments, the sort you would want to read even if godoc didn't exist.
+    to document 
+        a type, variable, constant, function, or package, 
+        write a comment directly preceding its declaration, with no intervening blank line.
+            begin with the name of the element
+            for packages 
+                first sentence appears in package list
+                if a large amount of documentation, place in its own file doc.go
+                    example: package fmt
+    the best thing about godoc's minimal approach is how easy it is to use. As a result, a lot of Go code, including all of the standard library, already follows the conventions.
+example
+    errors package
 
 ## 26 – Exercícios: Ninja Nível 12
 
@@ -1591,27 +2026,48 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Introdução
 
-
+Tests must
+    be in a file that ends with “_test.go”
+    put the file in the same package as the one being tested
+    be in a func with an signature “func TestXxx(*testing.T)”
+Run a test
+    go test (-v)
+Deal with test failure
+    use t.Error to signal failure
+Nice idiom
+    expected
+    got
 
 ### Testes em tabela
 
-
+We can write a series of tests to run. This allows us to test a variety of situations.
+- struct test, fields: data []int, answer int
+- tests := []test{[]int{}, int}
+- range tests
 
 ### Testes como exemplos
 
+Examples show up in documentation.
+    - func ExampleSomething() {
+        code
+        // Output: ajksdha }
+    }
+    godoc -http :8080
+    https://blog.golang.org/examples 
+    go test ./…
 
 
 ### Golint
 
-
+- Código: 
 
 ### Benchmark
 
-
+- Código: 
 
 ### Cobertura
 
-
+- Código: 
 
 ### Exemplos de benchmarks
 
@@ -1619,7 +2075,7 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Revisão
 
-
+- Código: 
 
 ## 28 – Exercícios: Ninja Nível 13
 
