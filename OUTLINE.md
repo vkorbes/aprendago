@@ -1941,72 +1941,54 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Introdução
 
-Before writing documentation, we are going to look at reading documentation. There are several things to know about documentation:
-    godoc.org
-        standard library and third party package documentation
-    golang.org
-        standard library documentation
-    go doc
-        command to read documentation at the command line
-    godoc
-        command to read documentation at the command line
-        also can run a local server showing documentation
+- Antes de escrever documentação, vamos ver como lê-la. Temos algumas possibilidades:
+    - godoc.org → documentação da standard library e outros
+    - golang.org → documentação da standard library
+    - go doc → comando para ler documentação na linha de comando
+    - godoc → idem acima, para pode-se servir a documentação local via http
 
 ### go doc
 
 - go help doc
-- go help doc -cmd cmd/doc
-go doc prints the documentation for a package, const, func, type, var, or method
-    go doc accepts zero, one, or two arguments.
-        zero
-            prints package documentation for the package in the current directory
-                go doc
-        one
-            argument Go-syntax-like representation of item to be documented
-                fyi: <sym> also known as “identifier”
-                    go doc <pkg> 
-                    go doc <sym>[.<method>] 
-                    go doc [<pkg>.]<sym>[.<method>] 
-                    go doc [<pkg>.][<sym>.]<method>
-                The first item in this list that succeeds is the one whose documentation is printed. If there is a symbol but no package, the package in the current directory is chosen. However, if the argument begins with a capital letter it is always assumed to be a symbol in the current directory.
-        two
-            first argument must be a full package path
-                go doc <pkg> <sym>[.<method>]
+- go doc demonstra a documentação de um package, const, func, type, var, método, etc.
+- go doc aceita zero, um, ou dois argumentos:
+    - zero: demonstra a documentação do package do diretório atual
+    - um: toma argumentos nos padrões abaixo
+        - go doc <pkg>
+        - go doc <sym>[.<method>]
+        - go doc [<pkg>.]<sym>[.<method>]
+        - go doc [<pkg>.][<sym>.]<method>
+    - dois: o primeiro argumento deve ser o nome do package
+        - go doc <pkg> <sym>[.<method>]
 
 ### godoc
-Godoc extracts and generates documentation for Go programs. It has two modes
-    without -http flag
-        command-line mode; prints text documentation to standard out and exits
-        -src flag
-            godoc prints the exported interface of a package in Go source form, or the implementation of a specific exported language 
-    with -http flag
-        runs as a web server and presents the documentation as a web page
-        godoc -http=:8080
-            http://localhost:8080/ 
+- godoc extrai e gera documentação de programas em Go. Funciona de duas maneiras:
+    - Sem o flag http é um comando normal, mostra a documentação no stdout e é isso aí. Pode conter o flag src, que mostra o código fonte.
+    - Com o flag http roda um servidor web local e mostra a documentação como página web.
+- Exemplo: godoc -http=:8080 → http://localhost:8080/ 
 
 ### godoc.org
 
-put the url of your code into godoc
-    your documentation will appear on godoc
-    “refresh” at bottom of page if it is ever out of date
+- Documentação da standard library e outros
+- Como colocar a documentação do seu package no godoc.org
+- refresh, delete
 
 ### Escrevendo documentação
 
-Documentation is a huge part of making software accessible and maintainable. Of course it must be well-written and accurate, but it also must be easy to write and to maintain. Ideally, it should be coupled to the code itself so the documentation evolves along with the code. The easier it is for programmers to produce good documentation, the better for everyone.
-    https://blog.golang.org/godoc-documenting-go-code 
-    godoc parses Go source code - including comments - and produces documentation as HTML or plain text. The end result is documentation tightly coupled with the code it documents. For example, through godoc's web interface you can navigate from a function's documentation to its implementation with one click.
-    comments are just good comments, the sort you would want to read even if godoc didn't exist.
-    to document 
-        a type, variable, constant, function, or package, 
-        write a comment directly preceding its declaration, with no intervening blank line.
-            begin with the name of the element
-            for packages 
-                first sentence appears in package list
-                if a large amount of documentation, place in its own file doc.go
-                    example: package fmt
-    the best thing about godoc's minimal approach is how easy it is to use. As a result, a lot of Go code, including all of the standard library, already follows the conventions.
-example
-    errors package
+- Documentação é uma parte extremamente importante de fazer com que software seja acessível e sustentável.
+- Documentação deve ser bem escrita e correta, mas tambem fácil de escrever e manter.
+- Deve ser acoplada com o código e evoluir junto com este. Quanto mais fácil for para os programadores criarem boa documentação... melhor fica pra todos os envolvidos.
+- godoc:
+    - Analisa código fonte em Go, incluindo comentários, e gera documentação em HTML ou texto
+    - O resultado é uma documentação firmemente atrelada ao código que documenta.
+    - Por exemplo, na interface web de godoc pode-se navegar da documentação à implementação de um código com apenas um clique.
+    - https://blog.golang.org/godoc-documenting-go-code 
+- Na prática:
+    - Para documentar um tipo, uma variável, uma constante, ou um pacote, escreva um comentário imediatamente antes de sua declaração, sem linhas em branco
+    - Comece a frase com o nome do elemento. No caso de pacotes, a primeira linha aparece no "package list."
+    - Caso esteja escrevendo bastante documentação, utilize um arquivo doc.go. Exemplo: package fmt.
+- A melhor parte dessa abordagem minimalista é que é super fácil de usar. Como resultado, muita coisa em Go, incluindo toda a standard library, já segue estas convenções.
+- Outro exemplo: errors package.
 
 ## 26 – Exercícios: Ninja Nível 12
 

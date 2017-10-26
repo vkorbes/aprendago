@@ -209,11 +209,11 @@
 | Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***25 – Escrevendo Documentação***
-| Introdução                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| go doc                    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| godoc                     | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| godoc.org                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Escrevendo documentação   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Introdução                | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| go doc                    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| godoc                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| godoc.org                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Escrevendo documentação   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***26 – Exercícios: Ninja Nível 12***
 | Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
