@@ -207,7 +207,7 @@
 | Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***25 – Escrevendo Documentação***
 | Introdução                | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | go doc                    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
@@ -215,21 +215,21 @@
 | godoc.org                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Escrevendo documentação   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***26 – Exercícios: Ninja Nível 12***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***27 – Testes & Benchmarking***
-| Introdução                | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Testes em tabela          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Testes como exemplos      | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Golint                    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Benchmark                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Cobertura                 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Exemplos de benchmarks    | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Revisão                   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Introdução                | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Testes em tabela          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Testes como exemplos      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Golint                    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Benchmark                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Cobertura                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Exemplos de benchmarks    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Revisão                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***28 – Exercícios: Ninja Nível 13***
-| Na prática: exercício #1  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***29 – Considerações Finais***
 | Buh-bye!  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |

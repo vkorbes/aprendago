@@ -4,18 +4,64 @@
 
 ### Por que Go?
 
+- 
+
 ### Sucesso
 
-### Recursos do curso
+- Qual o motivo que algumas pessoa obtem sucesso e outras não?
+- Eu quero que você obtenha sucesso com este curso, então vamos falar sobre o assunto.
+- Perguntaram a Bill Gates e Warren Buffet, independentemente, qual seria sua principal característica responsável pelo seu sucesso. A resposta de ambos foi:
+- Foco. 
+- (Fonte: https://www.linkedin.com/pulse/20140707144749-8353952-the-one-word-answer-to-why-bill-gates-and-warren-buffett-have-been-so-successful/)
+- O que isso quer dizer?
+- Escolha um objetivo e se concentre nele. Faça desse objetivo sua maior prioridade.
+- Foco. Concentração. → "Vou conseguir chegar lá ou vou morrer tentando."
+- Exemplo: minha carreira de violinista.
+- Faça disso uma prioridade, não uma resolução de ano novo. Tem vezes que seus amigos vão te chamar pra fazer algo massa e você vai ter que dizer, "gente, não vai dar, estou estudando."
+- O Todd costuma dizer: de gota em gota se enche um balde. A cada dia uma gota. Algumas semanas depois você olha o balde, e pô meu não tem quase nada ali, pra que esse esforço todo? Mas depois de alguns anos o balde vai estar transbordando. É só trabalhar, de gota em gota.
+- Então:
+    - Seja proativo.
+    - Trabalhe. Invista as horas de esforço.
+    - Faça exercício, coma direito, tenha uma atitude positiva.
+    - Easy mode: pare de ver TV e use esse tempo pra estudar.
 
-- gobyexample.com
-- A Linguagem de Programação Go (Alan Donovan, Brian Kernighan): https://www.amazon.com.br/dp/8575225464/
-- Go em Ação (William Kennedy, Brian Ketelsen, Erik St. Martin): https://www.amazon.com.br/dp/8575225065/
-- Introdução à Linguagem Go (Caleb Doxsey): https://www.amazon.com.br/dp/8575224891/
+- E algumas dicas práticas:
+    - Metade das pessoas que assiste esse curso diz que eu falo muito rápido. A outra metade diz que eu falo muito devagar. Então use o botãozinho ali no player e selecione a velocidade mais apropriada pra você.
+    - Boa parte de qualquer aprendizado se resume a memória muscular. Então quando eu passar exercícios, digite o código. Não copie e cole. Digite. E quando eu estiver programando "ao vivo," não passe pra frente, assista, e preste atenção. Se acostume com o processo, com o ato de programar.
 
-### Documentação
+- Com paciência e com persistência você chega lá.
+
+### Recursos
+
+- Leia as descrições dos vídeos!
+    - Outline completo:
+- Exercícios:
+
+- Comunidade: 
+    - Slack: https://invite.slack.golangbridge.org/
+    - #brazil
+    - #brazilian-go-studies, toda quinta às 22h!
+        - gravações em: https://www.youtube.com/cesargimenes
+        - exercícios em: https://github.com/crgimenes/Go-Hands-On
+        - FB: https://www.facebook.com/gophers.br/
+- Livros:
+    - A Linguagem de Programação Go (Alan Donovan, Brian Kernighan): https://www.amazon.com.br/dp/8575225464/
+    - Go em Ação (William Kennedy, Brian Ketelsen, Erik St. Martin): https://www.amazon.com.br/dp/8575225065/
+    - Introdução à Linguagem Go (Caleb Doxsey): https://www.amazon.com.br/dp/8575224891/
+- Em inglês: gobyexample.com, forum.golangbridge.org, stackoverflow.com/questions/tagged/go
+- Documentação oficial:
+    - golang.org
+    - godoc.org
+    - golang.org/doc/effective_go.html
 
 ### Português vs. inglês
+
+- Obviamente esse é um curso em português.
+- Mas a língua semi-oficial da programação e do mundo da tecnologia em geral é a língua inglesa.
+- Por isso vamos utilizar bastante termos em inglês ao longo do curso.
+- As explicações serão em português, claro, mas quero que todos fiquem bem confortáveis com os termos em inglês.
+- Desta maneira você será auto-suficiente e poderá procurar por documentação e ajuda por toda a internet, não somente nos sites em português.
+- (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
 
 ### Por trás do panos
 
@@ -1008,6 +1054,7 @@ Take the code from the previous exercise, then store the values of type person i
     - func i() func() int { x := 0; return func() int { x++; return x } }
     - Quando fizermos a := i() teremos um scope, um valor para x.
     - Quando fizermos b := i() teremos outro scope, e x terá um valor independente do x acima.
+- Closures nos permitem salvar dados entre function calls e ao mesmo tempo isolar estes dados do resto do código.
 - Go Playground:
 
 ### Recursividade
@@ -1935,7 +1982,11 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Na prática: exercício #5
 
-- Solução: 
+- Nos capítulos seguintes, uma das coisas que veremos é testes.
+- Desafio:
+    - Utilizando as seguintes fontes: https://godoc.org/testing & http://www.golang-book.com/books/intro/12
+    - Tente descobrir por conta própria como funcionam testes em Go.
+    - Pode usar tradutor automático, pode rodar código na sua máquina, pode procurar no Google. Vale tudo.
 
 ## 25 – Escrevendo Documentação
 
@@ -1994,68 +2045,112 @@ Take the code from the previous exercise, then store the values of type person i
 
 ### Na prática: exercício #1
 
+- Crie um package "cachorro".
+    - Este package deverá exportar uma função Idade, que toma como parâmetro um número de anos e retorna a idade equivalente em anos caninos. (1 ano humano → 7 anos caninos)
+    - Documente seu código com comentários, e utilize a função Idade na sua função main.
+- Rode seu programa para verificar se ele funciona.
+- Rode um local server com godoc e leia sua documentação.
 - Solução: 
 
 ### Na prática: exercício #2
 
-- Solução: 
+- Coloque seu código no GitHub.
+- Faça sua documentação aparecer em godoc.org, e tire um screenshot.
+- Delete seu código do GitHub.
+- Faça um refresh em godoc.org e veja se seu código sumiu.
+- Me mostre no twitter (@ellenkorbes) seu screenshot!
 
 ### Na prática: exercício #3
 
-- Solução: 
+- Use godoc na linha de comando para ver a documentação sobre:
+    - fmt
+    - fmt Print
+    - strings
+    - strconv
 
 ## 27 – Testes & Benchmarking
 
 ### Introdução
 
-Tests must
-    be in a file that ends with “_test.go”
-    put the file in the same package as the one being tested
-    be in a func with an signature “func TestXxx(*testing.T)”
-Run a test
-    go test (-v)
-Deal with test failure
-    use t.Error to signal failure
-Nice idiom
-    expected
-    got
+- Testes devem:
+    - ficar num arquivo cuja terminação seja _test.go
+    - ficar na mesma package que o código a ser testado
+    - ficar em funções do tipo "func TestNome(*testing.T)"
+- Para rodar os testes:
+    - go test
+    - go test -v
+- Para falhas, utilizamos t.Error(), onde a maneira idiomática é algo do tipo "expected: x. got: y."
+- Código: 
 
 ### Testes em tabela
 
-We can write a series of tests to run. This allows us to test a variety of situations.
-- struct test, fields: data []int, answer int
-- tests := []test{[]int{}, int}
-- range tests
+- Podemos escrever testes em série para testar variedades de situações.
+- Exemplo:
+    - struct test, fields: data []int, answer int
+    - tests := []test{[]int{}, int}
+    - range tests
+- Código: 
 
 ### Testes como exemplos
 
-Examples show up in documentation.
-    - func ExampleSomething() {
-        code
-        // Output: ajksdha }
-    }
-    godoc -http :8080
-    https://blog.golang.org/examples 
-    go test ./…
-
+- Outra maneira é fazer testes como exemplos.
+- Estes exemplos são os mesmo que aparecem na documentação.
+- Para exemplos o formato é "func ExampleFuncao()"
+- Deve haver um comentário "// Output: resultado", que é o que será testado
+- Para visualizar seu exemplo na documentação, fazemos o de sempre:
+    - godoc -http :8080
+- Tanto para testes quanto para exemplos podemos utilizar: go test ./...
+- Mais: https://blog.golang.org/examples 
 
 ### Golint
+
+- gofmt: formata o código
+- go vet: correctness → procura constructs suspeitos
+- golint: suggestions → procura coding style ruim
 
 - Código: 
 
 ### Benchmark
 
+- Benchmarks nos permitem testar a velocidade ou performance do nosso código.
+- Na prática:
+    - Arquivo: _test.go
+    - BET: Testes, Exemplos e...
+    - func BenchmarkFunc (b *testing.B) { for i := < b.N; i++ { ... } }
+    - go test -bench . ← todos
+    - go test -bench Func ← somente Func
+- go help testflag
 - Código: 
 
 ### Cobertura
 
-- Código: 
+- "Cobertura" em se tratando de testes se refere a quanto do seu código, percentualmente, está sendo testado. (E antes que alguem fique neurótico querendo 100%: em geral, 70-80% tá ótimo.)
+- A flag -cover faz a análise de cobertura do nosso código.
+- Podemos utilizar a flag -coverprofile <arquivo> para salvar a análise de cobertura em um arquivo.
+- Na prática:
+    - go test -cover
+    - go test -coverprofile c.out
+    - go tool cover -html=c.out ← gera uma versão que você pode abrir no browser
+    - go tool cover -h ← para mais detalhes
 
 ### Exemplos de benchmarks
 
-- Ponteiros
+- strings.Split → for range s + " " vs. string.Join
+- Analizando a diferença.
+- Código:
 
 ### Revisão
+
+- Aqui vamos refazer um exemplo completo do que vimos até agora.
+    - Testes
+    - Exemplos
+    - Benchmarks
+    - godoc -http :8080 
+    - go test 
+    - go test -bench . 
+    - go test -cover 
+    - go test -coverprofile c.out 
+    - go tool cover -html=c.out
 
 - Código: 
 
@@ -2063,16 +2158,54 @@ Examples show up in documentation.
 
 ### Na prática: exercício #1
 
+- Utilizando este código inicial:
+- Faça:
+    - Testes
+    - Benchmarks
+    - Coverage
+    - Veja o coverage no browser
+    - Exemplos, visíveis no browser
 - Solução: 
 
 ### Na prática: exercício #2
 
+- No código inicial temos uma função que conta quantas vezes cada palavra foi usada em um texto, e outra função em branco que deverá contar quantas palavras o texto tem.
+- Escreva o código para a função em branco.
+- Para sua função, faça:
+    - Testes
+    - Benchmarks
+    - Coverage
+    - Veja o coverage no browser
+    - Documentação
+    - Exemplos, visíveis no browser
+- Desafio:
+    - Faça tudo isso tambem para a função pré-pronta.
 - Solução: 
 
 ### Na prática: exercício #3
 
+- No código inicial temos uma função que retorna a média de todos os valores em uma slice []int.
+- Faça o mesmo que nos execícios anteriores, desta vez incluindo table tests.
 - Solução: 
 
 ## 29 – Considerações Finais
 
- 
+- Parabéns! O que você fez chegando aqui é fantástico. Seu aprendizado serve não somente para melhorar sua própria vida, mas para melhorar o mundo ao seu redor. As habilidades que você aprendeu aqui estão entre as mais requisitadas dos nossos tempos, e seu potencial para contribuir à sociedade é cada vez mais significativo.
+
+- Me siga no twitter! (@ellenkorbes)
+- Veja meu curso sobre Web Development usando Go.
+- Livros:
+    - A Linguagem de Programação Go (Alan Donovan, Brian Kernighan): https://www.amazon.com.br/dp/8575225464/
+    - Go em Ação (William Kennedy, Brian Ketelsen, Erik St. Martin): https://www.amazon.com.br/dp/8575225065/
+    - Introdução à Linguagem Go (Caleb Doxsey): https://www.amazon.com.br/dp/8575224891/
+- Comunidade: 
+    - Slack: https://invite.slack.golangbridge.org/
+    - #brazil
+    - #brazilian-go-studies, toda quinta às 22h!
+        - gravações em: https://www.youtube.com/cesargimenes
+- Outros:
+    - Exercism: http://exercism.io/languages/go/
+    - JustForFunc: https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw
+    - gobyexample.com
+    - forum.golangbridge.org
+    - stackoverflow.com/questions/tagged/go
