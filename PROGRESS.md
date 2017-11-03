@@ -20,22 +20,22 @@
 | Criando seu próprio tipo      | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
 | Conversão, não coerção        | ☑ | ☑ | ☑ | ☑ | ☐ | ☐ |
 | ***03 – Exercícios: Ninja Nível 1***
-| Contribua seu código      | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Contribua seu código      | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #1  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #2  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #3  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #4  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #5  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Na prática: exercício #6  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | ***04 – Fundamentos da Programação***
-| Tipo booleano                         | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Como os computadores funcionam        | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Tipos numéricos                       | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Tipo string (cadeias de caracteres)   | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Sistemas numéricos                    | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Constantes                            | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Iota                                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
-| Deslocamento de bits                  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
+| Tipo booleano                         | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Como os computadores funcionam        | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Tipos numéricos                       | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Tipo string (cadeias de caracteres)   | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Sistemas numéricos                    | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Constantes                            | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Iota                                  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Deslocamento de bits                  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | ***05 – Exercícios: Ninja Nível 2***
 | Na prática: exercício #1  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | Na prática: exercício #2  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |

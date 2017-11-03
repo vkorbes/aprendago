@@ -650,7 +650,7 @@
 - Para ver o tamanho usa-se: len(x)
 - ref/spec: "The length is part of the array's type" → [5]int != [6]int
 - Effective Go: Arrays são úteis para [umas coisas que a gente não vai fazer nunca] e servem de fundação para slices. Use slices ao invés de arrays.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/Fv-sDF-ryZ
 
 ### Slice: literal composta
 
@@ -660,7 +660,7 @@
     - ref/spec: Composite literals
 - Uma slice agrupa valores de um único tipo.
 - Criando uma slice: literal composta → x := []type{values}
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/W7Cxm8NPZC
 
 ### Slice: for range
 
@@ -671,17 +671,22 @@
 - Range significa alcance, faixa, extensão.
 - For range: for i, v := range x {}
 - Go Playground: 
+    - https://play.golang.org/p/h5-RFJn-Fh
+    - https://play.golang.org/p/2wj02m3-eM
 
-### Slice: fatiando uma fatia
+### Slice: fatiando ou deletando de uma fatia
 
 - x[:], x[a:], x[:b], x[a:b]
 - "a" é incluso;
 - "b" não é.
 - Exemplo: cabeça magnética de um disco rígido (relógio, fita).
     - Off-by-one error.
-- É fatiando que se deleta um item de uma slice.
+- Go Playground: https://play.golang.org/p/i5ZOLKb3Fi
+- É fatiando que se deleta um item de uma slice. Na prática:
+    - x := append(x[:i], x[:i]...)
+    - Go Playground: https://play.golang.org/p/xK2HwCqvwd
 - Exercício: tente acessar todos os itens de uma slice *sem* utilizar range.
-- Solução:
+- Solução: https://play.golang.org/p/aUC9qVCobH
 
 ### Slice: anexando a uma slice
 
@@ -690,12 +695,7 @@
 - x = append(slice, slice...)
 - Todd: unfurl → desdobrar, desenrolar
 - Nome oficial: enumeration
-- Go Playground: 
-
-### Slice: deletando de uma slice
-
-- x := append(x[:i], x[:i]...)
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/RpkDCTumpT 
 
 ### Slice: make
 
@@ -711,17 +711,19 @@
 - Append > cap modifica o array subjacente.
 - pkg/builtin/#append: "If it has sufficient capacity, the destination is resliced to accommodate the new elements. If it does not, a new underlying array will be allocated."
 - Effective Go.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/e8GWzyEEL8
 
 ### Slice: slice multi-dimensional
 
 - Slices multi-dimensionais são slices que contem slices.
 - São como planilhas.
 - [][]type
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/vKyHiG1GtM
+- Só pra sacanear: https://play.golang.org/p/ZSU_8eJ9Yp
 
-### Slice: o array subjacente
+### Slice: a surpresa do array subjacente
 
+- Isso tudo aqui a gente já viu:
 - Toda slice tem um array subjacente.
 - Um slice é: um ponteiro/endereço para um array, mais len e cap (que é o len to array).
 - Exemplo:
@@ -731,7 +733,7 @@
     - Ou seja, y utiliza o mesmo array subjacente que x.
     - O que nos dá um resultado inesperado.
 - Ou seja, bom saber de antemão pra não ter que aprender na marra.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/BBJLuIjU_i
 
 ### Maps: introdução
 
@@ -745,21 +747,18 @@
     - v, ok := m[key]
     - ok é um boolean, true/false
 - Na prática: if v, ok := m[key]; ok { }
-- Maps *não tem ordem.*
-- Go Playground: 
-
-### Maps: adicionando elementos & range
-
 - Para adicionar um item: m[v] = value
+- Maps *não tem ordem.*
+- Go Playground: https://play.golang.org/p/JXDdJan8Ev
+
+### Maps: range & deletando
+
 - Range: for k, v := range map { }
 - Reiterando: maps *não tem ordem* e um range usará uma ordem aleatória.
-- Go Playground: 
-
-### Maps: deletando
-
+- Go Playground: https://play.golang.org/p/6zEMfIP-AE
 - delete(map, key)
 - Deletar uma key não-existente não retorna erros!
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/0uuIicU3Zz
 
 ## 09 – Exercícios: Ninja Nível 4
 
@@ -770,7 +769,7 @@
      - Atribua valores aos seus índices
 - Utilize range e demonstre os valores do array.
 - Utilizando format printing, demonstre o tipo do array.
-- Solução: 
+- Solução: https://play.golang.org/p/tpWDzzlO2l
 
 ### Na prática: exercício #2
 
@@ -779,7 +778,7 @@
     - Atribua 10 valores a ela
 - Utilize range para demonstrar todos estes valores.
 - E utilize format printing para demonstrar seu tipo.
-- Solução: 
+- Solução: https://play.golang.org/p/ST3TKusuOd
 
 ### Na prática: exercício #3
 
@@ -789,7 +788,7 @@
     - Do segundo ao sétimo item do slice (incluindo o sétimo item!)
     - Do terceiro ao penúltimo item do slice (incluindo o penúltimo item!)
     - Desafio: obtenha o mesmo resultado acima utilizando a função len() para determinar o penúltimo item
-- Solução: 
+- Solução: https://play.golang.org/p/1aPXVeR1mf
 
 ### Na prática: exercício #4
 
@@ -801,7 +800,7 @@
 - Anexe a ela a seguinte slice:
     - y := []int{56, 57, 58, 59, 60}
 - Demonstre a slice x.
-- Solução: 
+- Solução: https://play.golang.org/p/6WNJ0Otpy0
 
 ### Na prática: exercício #5
 
@@ -809,7 +808,7 @@
     - x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
 - Utilizando slicing e append, crie uma slice y que contenha os valores:
     - [42, 43, 44, 48, 49, 50, 51]
-- Solução: 
+- Solução: https://play.golang.org/p/26bT-UKmJH
 
 ### Na prática: exercício #6
 
@@ -817,7 +816,7 @@
     - Os estados: "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
 - Demonstre o len e cap da slice.
 - Demonstre todos os valores da slice *sem utilizar range.*
-- Solução: 
+- Solução: https://play.golang.org/p/cGYBphlyCE
 
 
 ### Na prática: exercício #7
@@ -825,7 +824,7 @@
 - Crie uma slice contendo slices de strings ([][]string). Atribua valores a este slice multi-dimensional da seguinte maneira:
     - "Nome", "Sobrenome", "Hobby favorito"
 - Inclua dados para 3 pessoas, e utilize range para demonstrar estes dados.
-- Solução: 
+- Solução: https://play.golang.org/p/Gh81-d5tMi
 
 ### Na prática: exercício #8
 
@@ -833,12 +832,12 @@
     - Key deve conter nomes no formato sobrenome_nome
     - Value deve conter os hobbies favoritos da pessoa
 - Demonstre todos esses valores e seus índices.
-- Solução: 
+- Solução: https://play.golang.org/p/nD3TW8VQmH
 
 ### Na prática: exercício #9
 
 - Utilizando o exercício anterior, adicione uma entrada ao map e demonstre o map inteiro utilizando range.
-- Solução: 
+- Solução: https://play.golang.org/p/3fcvHlt8Lm
 
 ### Na prática: exercício #10
 
@@ -854,7 +853,7 @@
 - Declaração: type x struct { y: z }
 - Acesso: x.y
 - Exemplo: nome, idade, fumante.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/5i0DqxuBp1
 
 ### Structs embutidos
 
@@ -873,16 +872,17 @@
             - x, y int
             - anonymous fields
             - promoted fields
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/z9UQej4IQT
 
 ### Structs anônimos
 
 - São structs sem identificadores.
 - x := struct { name type }{ name: value }
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/xyhNnSCu1f
 
 ### Colocando ordem na casa
 
+- [???]
 - Go Playground: 
 
 ## 11 – Exercícios: Ninja Nível 5
@@ -894,16 +894,14 @@
     - Sobrenome
     - Sabores favoritos de sorvete
 - Crie dois valores do tipo "pessoa" e demonstre estes valores, utilizando range na slice que contem os sabores de sorvete.
-- Solução: 
+- Solução: https://play.golang.org/p/Pyp7vmTJfY
 
 ### Na prática: exercício #2
 
 - Utilizando a solução anterior, coloque os valores do tipo "pessoa" num map, utilizando os sobrenomes como key.
 - Demonstre os valores do map utilizando range.
 - Os diferentes sabores devem ser demonstrados utilizando outro range, dentro do range anterior.
-- Solução: 
-
-Take the code from the previous exercise, then store the values of type person in a map with the key of last name. Access each value in the map. Print out the values, ranging over the slice.
+- Solução: https://play.golang.org/p/TGoa54GmUe
 
 ### Na prática: exercício #3
 
@@ -913,20 +911,21 @@ Take the code from the previous exercise, then store the values of type person i
 - Crie dois novos tipos: caminhonete e sedan
     - Os tipos subjacentes devem ser struct
     - Ambos devem conter "veículo" como struct embutido
-    - O tipo caminhonete deve conter um campo bool chamado "quatroRodas"
+    - O tipo caminhonete deve conter um campo bool chamado "traçãoNasQuatro"
     - O tipo sedan deve conter um campo bool chamado "modeloLuxo"
 - Usando os structs veículo, caminhonete e sedan:
     - Usando composite literal, crie um valor de tipo caminhonete e dê valores a seus campos
     - Usando composite literal, crie um valor de tipo sedan e dê valores a seus campos
 - Demonstre estes valores.
 - Demonstre um único campo de cada um dos dois.
-- Solução: 
+- Solução: https://play.golang.org/p/3eoGb0kxzT
 
 ### Na prática: exercício #4
 
 - Crie e use um struct anônimo.
 - Desafio: dentro do struct tenha um valor de tipo map e outro do tipo slice.
-- Solução: 
+- Solução: https://play.golang.org/p/iTGLyH0Ijc
+https://play.golang.org/p/iTGLyH0Ijc
 
 ## 12 – Funções
 
@@ -941,34 +940,30 @@ Take the code from the previous exercise, then store the values of type person i
     - Funções são chamadas com argumentos
 - Tudo em Go é *pass by value.*
     - Pass by reference, pass by copy, ... não.
+- Parâmetro pode ser ...variádico.
 - Exemplos:
     - Função básica. 
-        - Go Playground: 
+        - Go Playground: https://play.golang.org/p/FebJblBenP
     - Função que aceita um argumento. 
         - Go Playground: 
+        https://play.golang.org/p/CE6Ij3U4QB
     - Função com retorno. 
-        - Go Playground: 
-    - Função com múltiplos retornos. 
-        - Go Playground: 
-
-### Parâmetro variádico
-
-- ...variádico.
-- Exemplo: função que retorna o total de todos os ints recebidos.
-- Go Playground: 
+        - Go Playground: https://play.golang.org/p/gKxwYe6btP
+    - Função com múltiplos retornos e parâmetro variádico.
+        - Go Playground: https://play.golang.org/p/OcQ1wXwM2c
+    - Mais um: https://play.golang.org/p/8wc2TA9xH_
 
 ### Desenrolando (enumerando) uma slice
 
 - Quando temos uma slice, podemos passar os elementos individuais através "deste..." operador.
 - Exemplos:
     - Desenrolando uma slice de ints com como argumento para a função "soma" anterior
-        - Go Playground: 
+        - Go Playground: https://play.golang.org/p/k8O3__8UDa
     - Pode-se passar *zero* ou mais valores
-        - Go Playground: 
+        - Go Playground: https://play.golang.org/p/C238I9n7Vs
     - O parâmetro variádico deve ser o parâmetro final → ref/spec#Passing_arguments_to_..._parameters
-        - Go Playground: 
-    - Pode-se passar uma "slice..."
-        - Go Playground: 
+        - Go Playground: https://play.golang.org/p/8wc2TA9xH_
+        - Não roda: https://play.golang.org/p/2qTAnLWfgB
 
 ### Defer
 
@@ -978,7 +973,7 @@ Take the code from the previous exercise, then store the values of type person i
 - "Deixa pra última hora!"
 - ref/spec
 - Sempre usamos para fechar um arquivo após abri-lo.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/sFj8arw0E_
  
 ### Métodos
 
@@ -987,7 +982,7 @@ Take the code from the previous exercise, then store the values of type person i
 - Pode-se anexar uma função a um tipo utilizando seu receiver.
 - Utilização: valor.método()
 - Exemplo: o tipo "pessoa" pode ter um método oibomdia()
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/tQtoqUBpY5
 
 ### Interfaces & polimorfismo
 
