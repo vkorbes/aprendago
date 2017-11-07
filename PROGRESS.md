@@ -31,7 +31,8 @@
 | Tipo booleano                         | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | Como os computadores funcionam        | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | Tipos numéricos                       | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
-| Tipo string (cadeias de caracteres)   | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
+| Int overflow                          | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Tipo string (cadeias de caracteres)   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Sistemas numéricos                    | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | Constantes                            | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
 | Iota                                  | ☑ | ☑ | ☑ | ☑ | ☐ | ☑ |
@@ -69,92 +70,93 @@
 | Na prática: exercício #9  | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | Na prática: exercício #10 | ☑ | ☑ | ☑ | ☐ | ☐ | ☑ |
 | ***08 – Agrupamentos de Dados***
-| Array                                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: literal composta               | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: for range                      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: fatiando uma fatia             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: anexando a uma slice           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: deletando de uma slice         | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: make                           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: slice multi-dimensional        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Slice: o array subjacente             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Maps: introdução                      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Maps: adicionando elementos & range   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Maps: deletando                       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Array                                 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: literal composta               | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: for range                      | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: fatiando uma fatia             | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: anexando a uma slice           | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: deletando de uma slice         | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: make                           | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: slice multi-dimensional        | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Slice: o array subjacente             | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Maps: introdução                      | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Maps: adicionando elementos & range   | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Maps: deletando                       | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***09 – Exercícios: Ninja Nível 4***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #8  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #9  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #10 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #8  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #9  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #10 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***10 – Structs***
-| Struct                    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Structs embutidos         | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Lendo a documentação      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Structs anônimos          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Struct                    | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Structs embutidos         | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Lendo a documentação      | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Structs anônimos          | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Colocando ordem na casa   | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***11 – Exercícios: Ninja Nível 5***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***12 – Funções***
-| Sintaxe                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Parâmetro variádico       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Desenrolando uma slice    | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Defer                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Métodos                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Interfaces & polimorfismo | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Funções anônimas          | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Func como expressão       | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Retornando uma função     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Callback                  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Closure                   | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Recursividade             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Sintaxe                   | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Parâmetro variádico       | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Desenrolando uma slice    | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Defer                     | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Métodos                   | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Interfaces & polimorfismo | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Funções anônimas          | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Func como expressão       | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Retornando uma função     | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Callback                  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Closure                   | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Recursividade             | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***13 – Exercícios: Ninja Nível 6***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #8  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #9  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #10 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #11 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #12 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #8  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #9  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #10 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #11 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #12 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***14 – Ponteiros***
-| O que são ponteiros?  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Quando usar ponteiros | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Conjuntos de métodos  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| O que são ponteiros?  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Quando usar ponteiros | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Conjuntos de métodos  | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | ***15 – Exercícios: Ninja Nível 7***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***16 – Aplicação***
-| Documentação JSON             | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| JSON marshal (ordenação)      | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| JSON unmarshal (desordenação) | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A interface Writer            | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| O pacote sort                 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Customizando o sort           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| bcrypt                        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Documentação JSON             | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| JSON marshal (ordenação)      | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| JSON unmarshal (desordenação) | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| A interface Writer            | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| O pacote sort                 | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Customizando o sort           | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| bcrypt                        | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***17 – Exercícios: Ninja Nível 8***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | ***18 – Concorrência***
-| Concorrência vs. paralelismo  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| WaitGroup                     | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Conjuntos de métodos, parte 2 | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
-| Documentação                  | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Concorrência vs. paralelismo  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| WaitGroup                     | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
+| WaitGroup tabajara            | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Conjuntos de métodos, parte 2 | ☐ | ☐ | ☐ | ☐ | ☐ | ☐ |
+| Documentação                  | ☑ | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Condição de corrida           | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Mutex                         | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Atomic                        | ☑ | ☐ | ☐ | ☐ | ☐ | ☐ |

@@ -998,9 +998,10 @@ https://play.golang.org/p/iTGLyH0Ijc
     - Cada um tem seu método *oibomdia()*, e podem dar oi utilizando *pessoa.oibomdia()*
     - Implementam a interface *gente*
     - Ambos podem acessar o método *serhumano()* que chama o método *oibomdia()* de cada *gente*
-    - Tambem podemos no método *oibomdia()* tomar ações diferentes dependendo do tipo:
+    - Tambem podemos no método *serhumano()* tomar ações diferentes dependendo do tipo:
         switch pessoa.(type) { case profissão1: fmt.Println(h.(profissão1).valorquesóexisteemprofissão1) [...] }* 
-    - Go Playground: https://play.golang.org/p/VLbo_1uE-U
+    - Go Playground pré-pronto: https://play.golang.org/p/VLbo_1uE-U
+    - Go Playground ao vivo: https://play.golang.org/p/zGKr7cvTPF
 - Onde se utiliza?
     - Área de formas geométricas (gobyexample.com)
     - Sort
@@ -1013,13 +1014,13 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Anonymous self-executing functions → Funções anônimas auto-executáveis.
 - func(p params) { ... }()
 - Vamos ver bastante quando falarmos de goroutines.
-- Go Playground:
+- Go Playground: https://play.golang.org/p/Rnqmo6X6jh
 
 ### Func como expressão
 
 - f := func(p params){ ... }
 - f()
-- Go Playground:
+- Go Playground: https://play.golang.org/p/cPxhPUbfLy
 
 ### Retornando uma função
 
@@ -1027,7 +1028,7 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Declaração: func f() return
 - Exemplo: func f() func() int { [...]; return func() int{ return [int] } }
     - ????: fmt.Println(f()())
-- Go Playground:
+- Go Playground: https://play.golang.org/p/zPjoWNrCJF
 
 ### Callback
 
@@ -1050,7 +1051,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - Quando fizermos a := i() teremos um scope, um valor para x.
     - Quando fizermos b := i() teremos outro scope, e x terá um valor independente do x acima.
 - Closures nos permitem salvar dados entre function calls e ao mesmo tempo isolar estes dados do resto do código.
-- Go Playground:
+- Go Playground: https://play.golang.org/p/AdFciYwI2Z
 
 ### Recursividade
 
@@ -1059,8 +1060,8 @@ https://play.golang.org/p/iTGLyH0Ijc
 - No estudo de funções: é uma função que chama a ela própria.
 - Exemplo: fatoriais.
     - 4! = 4 * 3 * 2 * 1 (e no zero, deu.)
-    - Com recursividade. Go Playground:
-    - Com loops. Go Playground:
+    - Com recursividade. Go Playground: https://play.golang.org/p/ujsLnUhRp_
+    - Com loops. Go Playground: https://play.golang.org/p/F2VsUjYVhc
 
 ## 13 – Exercícios: Ninja Nível 6
 
@@ -1071,7 +1072,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - Crie outra função que retorne um int e uma string
     - Chame as duas funções
     - Demonstre seus resultados
-- Solução: 
+- Solução: https://play.golang.org/p/rxJM5fgI-9
 
 - Revisão:
     - Funções!
@@ -1107,12 +1108,12 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Passe um valor do tipo slice of int como argumento para a função;
 - Crie outra função, esta deve receber um valor do tipo slice of int e retornar a soma de todos os elementos da slice;
 - Passe um valor do tipo slice of int como argumento para a função.
-- Solução: 
+- Solução: https://play.golang.org/p/Tgv3wwxKV-
 
 ### Na prática: exercício #3
 
 - Utilize a declaração defer de maneira que demonstre que sua execução só ocorre ao final do contexto ao qual ela pertence.
-- Solução: 
+- Solução: https://play.golang.org/p/b5Ua2kNN8a
 
 ### Na prática: exercício #4
 
@@ -1123,7 +1124,7 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Crie um método para "pessoa" que demonstre o nome completo e a idade;
 - Crie um valor de tipo "pessoa";
 - Utilize o método criado para demonstrar esse valor.
-- Solução: 
+- Solução: https://play.golang.org/p/GBZcnu0Ajp
 
 ### Na prática: exercício #5
 
@@ -1138,36 +1139,36 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Crie um valor de tipo "círculo"
 - Use a função "info" para demonstrar a área do "quadrado"
 - Use a função "info" para demonstrar a área do "círculo"
-- Solução: 
+- Solução: https://play.golang.org/p/qLY-q3vffQ
 
 ### Na prática: exercício #6
 
 - Crie e utilize uma função anônima.
-- Solução: 
+- Solução: https://play.golang.org/p/Kgo6hVr5G5
 
 ### Na prática: exercício #7
 
 - Atribua uma função a uma variável.
 - Chame essa função.
-- Solução: 
+- Solução: https://play.golang.org/p/RMHLL3N5Ww
 
 ### Na prática: exercício #8
 
 - Crie uma função que retorna uma função.
 - Atribua a função retornada a uma variável.
 - Chame a função retornada.
-- Solução: 
+- Solução: https://play.golang.org/p/A74rufv6Rs
 
 ### Na prática: exercício #9
 
 - Callback: passe uma função como argumento a outra função.
-- Solução: 
+- Solução: https://play.golang.org/p/2epLD_Yyap
 
 ### Na prática: exercício #10
 
 - Demonstre o funcionamento de um closure.
 - Ou seja: crie uma função que retorna outra função, onde esta outra função faz uso de uma variável alem de seu scope.
-- Solução: 
+- Solução: https://play.golang.org/p/sA7NHpkCCg
 
 ### Na prática: exercício #11
 
@@ -1187,12 +1188,12 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Um pointeiro se refere a esse endereço.
 - Notações:
     - &variável mostra o endereço de uma variável
-        - %T: variável vs. &variǻvel
+        - %T: variável vs. &variável
     - *variável faz de-reference, mostra o valor que consta nesse endereço
     - ????: *&var funciona!
     - *type é um tipo que contem o endereço de um valor do tipo type, nesse caso * não é um operador
 - Exemplo: a := 0; b := &a; *b++
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/gC1qGFUYrV
 
 ### Quando usar ponteiros
 
@@ -1202,7 +1203,7 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Exemplos:
     - x := 0; funçãoquemudaovalordoargumentopra1(x); Print(x)
     - x := 0; funçãoquemudaovalordo*argumentopra1(&x); Print(x)
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/VZmfWfw76s
 
 ### Conjuntos de métodos
 
@@ -1221,18 +1222,29 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Exemplo: interfaces em gobyexample.com
 - Go Playground: 
 
+NON-POINTER RECEIVER & NON-POINTER VALUE
+https://play.golang.org/p/2ZU0QX12a8
+NON-POINTER RECEIVER & POINTER VALUE
+https://play.golang.org/p/glWZmm0gY6 
+POINTER RECEIVER & POINTER VALUE
+https://play.golang.org/p/pWFxsg6MSe 
+POINTER RECEIVER & NON-POINTER VALUE
+https://play.golang.org/p/G3lEy-4Mc8 ( code does not run )
+
+https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
+
 ## 15 – Exercícios: Ninja Nível 7
 
 ### Na prática: exercício #1
 
 - Crie um valor e atribua-o a uma variável.
 - Demonstre o endereço deste valor na memória.
-- Solução: 
+- Solução: https://play.golang.org/p/0jVt1yaoFL
 
 ### Na prática: exercício #2
 
 - Crie um struct "pessoa"
-- Crie uma função chamada mudeMe que tenha *pessoa como parâmetro. Essa função deve mudar o valor armazenado no endereço *pessoa.
+- Crie uma função chamada mudeMe que tenha *pessoa como parâmetro. Essa função deve mudar um valor armazenado no endereço *pessoa.
     - Dica: a maneira "correta" para fazer dereference de um valor em um struct seria (*valor).campo
     - Mas consta uma exceção na documentação. Link: https://golang.org/ref/spec#Selectors
     - "As an exception, if the type of x is a named pointer type and (*x).f is a valid selector expression denoting a field (but not a method), 
@@ -1240,13 +1252,13 @@ https://play.golang.org/p/iTGLyH0Ijc
     - Ou seja, podemos usar tanto o atalho p1.nome quanto o tradicional (*p1).nome
 - Crie um valor do tipo pessoa;
 - Use a função mudeMe e demonstre o resultado.
-- Solução: 
+- Solução: https://play.golang.org/p/qiYp9leJcn
 
 ## 16 – Aplicações
 
 ### Documentação JSON
 
-- Jǻ entendemos ponteiros, já entendemos métodos. Já temos o conhecimento necessário para começar a utilizar a standard library.
+- Já entendemos ponteiros, já entendemos métodos. Já temos o conhecimento necessário para começar a utilizar a standard library.
 - Nesse vídeo faremos uma orientação sobre como abordar a documentação.
 - Essa aula não foi preparada. Vai ser tudo ao vivo no improviso pra vocês verem como funciona o processo.
     - golang.org → Documents → Package Documentation 
@@ -1256,13 +1268,12 @@ https://play.golang.org/p/iTGLyH0Ijc
         - funcs
         - types
         - methods
-- Go Playground: 
 
 ### JSON marshal (ordenação)
 
 - Exemplo: transformando structs em Go em código JSON.
 - No improviso tambem.
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/_JvCOlK-H9
 
 ### JSON unmarshal (desordenação)
 
@@ -1273,7 +1284,8 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Marshal/unmarshal vs. encoder/decoder
     - Marshal vai pra uma variável
     - Encoder "vai direto"
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/l6wbuLu1NS
+- Com Encoder: https://play.golang.org/p/Pgwr0O07aL
 
 ### A interface Writer
 
@@ -1305,6 +1317,8 @@ https://play.golang.org/p/iTGLyH0Ijc
     - Sort altera o valor original!
 - Exemplo: Ints, Strings.
 - Go Playground: 
+    - sort.Strings: https://play.golang.org/p/Rs1NVwmg7h
+    - sort.Ints: https://play.golang.org/p/I2_vsHujZa
 
 ### Customizando o sort
 
@@ -1319,7 +1333,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - tipo ordenarPorPotencia
     - tipo ordenarPorConsumo
     - tipo ordenarPorLucroProDonoDoPosto
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/KOIhAsE3OK
 
 ### bcrypt
 
@@ -1329,6 +1343,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - CompareHashAndPassword
 - Sem Go Playground!
     - go get golang.org/x/crypto/bcrypt
+- Arquivo: 16_aplicacao/bcrypt/main.go
 
 ## 17 – Exercícios: Ninja Nível 8
 
@@ -1337,35 +1352,34 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Partindo do código abaixo, utilize marshal para transformar []user em JSON.
     - https://play.golang.org/p/U0jea43X55
 - Atenção! Tem pegadinha aqui.
-- Solução: 
+- Solução: https://play.golang.org/p/gUOHXruFGs
 
 ### Na prática: exercício #2
 
 - Partindo do código abaixo, utilize unmarshal e demonstre os valores.
     - https://play.golang.org/p/b_UuCcZag9
 - Dica: JSON-to-Go.
-- Solução: 
+- Solução: https://play.golang.org/p/UyL4MCGs_u
 
 ### Na prática: exercício #3
 
 - Partindo do código abaixo, utilize NewEncoder() e Encode() para enviar as informações como JSON para Stdout.
     - https://play.golang.org/p/BVRZTdlUZ_
-- A gente não viu isso nas aulas. O exercício é descobrir como as coisas funcionam.
 - Desafio: descubra o que é, e utilize, method chaining para conectar os dois métodos acima.
-- Solução: 
+- Solução: https://play.golang.org/p/U4xSnZD_3r
 
 ### Na prática: exercício #4
 
-- Partindo do código abaixo, ordene a []int e a []string de cada pessoa.
+- Partindo do código abaixo, ordene a []int e a []string.
     - https://play.golang.org/p/H_q75mpmHW
-- Solução: 
+- Solução: https://play.golang.org/p/3J3wcfVQBZ
 
 ### Na prática: exercício #5
 
 - Partindo do código abaixo, ordene os []user por idade e sobrenome.
     - https://play.golang.org/p/BVRZTdlUZ_
 - Os valores no campo Sayings devem ser ordenados tambem, e demonstrados de maneira esteticamente harmoniosa.
-- Solução: 
+- Solução: https://play.golang.org/p/3wgW4BDasu
 
 ## 18 – Concorrência
 
@@ -1385,7 +1399,7 @@ https://play.golang.org/p/iTGLyH0Ijc
 - O código abaixo é linear. Como fazer as duas funções rodarem concorrentemente?
     - https://play.golang.org/p/XP-ZMeHUk4
 - Goroutines!
-- O que são goroutines? São threads.
+- O que são goroutines? São "threads."
 - O que são threads? [WP](https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o))
 - Na prática: go func.
 - Exemplo: código termina antes da go func executar.
@@ -1398,7 +1412,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - func Wait: "Espera todo mundo terminar."
 - Ah, mas então... sim!
 - Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
-- Go Playground: 
+- Go Playground: https://play.golang.org/p/8iiqLX4sWc
 
 ### Conjuntos de métodos, parte 2
 
@@ -1442,17 +1456,16 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Race condition: 
         *Função 1       var     Função 2*
          Lendo: 0   →   0
-         Yield           0  →  Lendo: 0
+         Yield          0   →   Lendo: 0
          var++: 1               Yield
-         Grava: 1   →   1      var++: 1
-                         1  ←  Grava: 1
+         Grava: 1   →   1       var++: 1
+                        1   ←   Grava: 1
          Lendo: 1   ←   1
-         Yield           1  →  Lendo: 1
+         Yield          1   →   Lendo: 1
          var++: 2               Yield
-         Grava: 2   →   2      var++: 2
-                         2  ←  Grava: 2
+         Grava: 2   →   2       var++: 2
+                        2   ←   Grava: 2
 - E é por isso que vamos ver mutex, atomic e, por fim, channels.
-- Go Playground: 
 
 ### Condição de corrida
 
@@ -1652,7 +1665,7 @@ https://play.golang.org/p/iTGLyH0Ijc
     - package declaration em todos os arquivos
     - package scope: um elemento de um arquivo é acessível de todos os arquivos
     - imports tem file scope
-- Exportado vs. não-exportado, ou seja, visível vs. não-vießivel
+- Exportado vs. não-exportado, ou seja, visível vs. não-visível
     aka, visible / not visible
     we don’t say (generally speaking): public / private
     capitalization
