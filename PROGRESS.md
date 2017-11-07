@@ -1,7 +1,7 @@
 # Progress
 
 | Video | Outline | Record | Edit | Upload | Up RAWs |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|
+|---|:---:|:---:|:---:|:---:|:---:|
 | ***01 – Visão Geral do Curso***
 | Por que Go?           | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Sucesso               | ☐ | ☐ | ☐ | ☐ | ☐ |
