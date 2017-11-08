@@ -1576,7 +1576,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - IDEs:
     - Visual Studio Code → https://code.visualstudio.com/
         - go get -v github.com/nsf/gocode
-    - Gogland → https://www.jetbrains.com/go/ ($?)
+    - Goland → https://www.jetbrains.com/go/ ($?)
     - Atom → https://atom.io/
     - Sublime → https://www.sublimetext.com/ ($)
 - Fontes:

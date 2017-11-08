@@ -157,16 +157,15 @@
 | WaitGroup tabajara            | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Conjuntos de métodos, parte 2 | ☐ | ☐ | ☐ | ☐ | ☐ |
 | Documentação                  | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Condição de corrida           | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Mutex                         | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Atomic                        | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Condição de corrida           | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Mutex                         | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Atomic                        | ☑ | ☑ | ☐ | ☐ | ☐ |
 | ***19 – Seu Ambiente de Desenvolvimento***
-| O terminal                | ☑ | ☐ | ☐ | ☐ | ☐ |
+| O terminal                | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Bash no Windows           | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Instalando Go             | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Go workspace              | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Environment variables     | ☑ | ☐ | ☐ | ☐ | ☐ |
-| IDE's                     | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Go workspace & env vars   | ☑ | ☑ | ☐ | ☐ | ☐ |
+| IDE's                     | ☑ | ☑ | ☐ | ☐ | ☐ |
 | Comandos Go               | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Repositórios no GitHub    | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Explorando o GitHub       | ☑ | ☐ | ☐ | ☐ | ☐ |
