@@ -1652,7 +1652,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 - GOOS
 - GOARCH
-- `GOOS=darwin GOARCH=386 go build test.go`
+- `GOOS=darwin GOARCH=amd64 go build test.go`
 - https://godoc.org/runtime#pkg-constants
 - git push
 - git clone
@@ -1675,6 +1675,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
     - pastas diferentes
     - requer imports
     - para usar: package.Função()
+- Artigo: https://rakyll.org/style-packages/
 - Exemplo: 
 
 ## 20 – Exercícios: Ninja Nível 9
