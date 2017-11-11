@@ -1657,7 +1657,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - git push
 - git clone
 - go get
-- Exemplo: 
+- Arquivos: /19_seu-ambiente-de-desenvolvimento/compilacaocruzada/
 
 ### Pacotes
 
@@ -1665,16 +1665,15 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
     - package declaration em todos os arquivos
     - package scope: um elemento de um arquivo é acessível de todos os arquivos
     - imports tem file scope
-- Exportado vs. não-exportado, ou seja, visível vs. não-visível
-    aka, visible / not visible
-    we don’t say (generally speaking): public / private
-    capitalization
-        capitalize: exported, visible outside the package
-        lowercase: unexported, not visible outside the package
 - Opção 2: separando por packages.
     - pastas diferentes
     - requer imports
     - para usar: package.Função()
+- Exportado vs. não-exportado, ou seja, visível vs. não-visível
+    - Em Go não utilizamos os termos "público" e "privado" como em outras linguagens
+    - É somente questão de capitalização
+        - Com maiúscula: exportado, visível fora do package
+        - Com minúscula: não exportado, não utilizável fora do package
 - Artigo: https://rakyll.org/style-packages/
 - Exemplo: 
 
@@ -1685,7 +1684,9 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Alem da goroutine principal, crie duas outras goroutines.
 - Cada goroutine adicional devem fazer um print separado.
 - Utilize waitgroups para fazer com que suas goroutines finalizem antes de o programa terminar.
-- Solução: 
+- Solução:
+    - 20_exercicios-ninja-9/01_moleza/main.go
+    - 20_exercicios-ninja-9/01_foda/main.go
 
 ### Na prática: exercício #2
 
@@ -1698,7 +1699,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
         - Que você pode utilizar um valor do tipo "*pessoa" na função "dizerAlgumaCoisa"
         - Que você não pode utilizar um valor do tipo "pessoa" na função "dizerAlgumaCoisa"
 - Se precisar de dicas, veja: https://gobyexample.com/interfaces
-- Solução: 
+- Solução: 20_exercicios-ninja-9/02/main.go
 
 ### Na prática: exercício #3
 
@@ -1712,17 +1713,17 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
         - Copiar o novo valor para a variável inicial
     - Utilize WaitGroups para que seu programa não finalize antes de suas goroutines.
     - Demonstre que há uma condição de corrida utilizando a flag -race
-- Solução: 
+- Solução: 20_exercicios-ninja-9/03/main.go
 
 ### Na prática: exercício #4
 
 - Utilize mutex para consertar a condição de corrida do exercício anterior.
-- Solução: 
+- Solução: 20_exercicios-ninja-9/04/main.go
 
 ### Na prática: exercício #5
 
-- Utilize atomic para consertar a condição de corrida do exercício anterior.
-- Solução: 
+- Utilize atomic para consertar a condição de corrida do exercício #3.
+- Solução: 20_exercicios-ninja-9/05/main.go
 
 ### Na prática: exercício #6
 
@@ -1731,7 +1732,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
     - go run
     - go build
     - go install
-- Solução: 
+- Solução: 20_exercicios-ninja-9/06/main.go
 
 ### Na prática: exercício #7
 
@@ -1750,7 +1751,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
         - init, cond, post
         - break
         - continue
-    - Funçõś
+    - Funções
     - func (receiver) identifier(params) (returns) { code }
     - Métodos
     - Interfaces
@@ -1788,51 +1789,75 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
         - Ou com buffer. Via de regra: má idéia; é legal em certas situações, mas em geral é melhor sempre passar o bastão de maneira sincronizada.
 - Interessante: ref/spec → types
 - Código: 
+    - Block: https://play.golang.org/p/dClS7vQlYE (não roda!)
+    - Go routine: https://play.golang.org/p/ZbNCwUuiPi
+    - Buffer: https://play.golang.org/p/32vYvCR7qn
+    - Buffer block: https://play.golang.org/p/smeW6vigAT
+    - Mais buffer: https://play.golang.org/p/Pe2pcboGiA
 
 ### Canais direcionais
 
-- Tipo.
+- Canais podem ser direcionais.
+- E isso serve pra...?
+- Um send channel e um receive channel são tipos diferentes. Isso permite que os type-checking mechanisms do compilador façam com que não seja possível, por exemplo, escrever num canal de leitura.
+- Aos aventureitos: https://stackoverflow.com/questions/13596186/whats-the-point-of-one-way-channels-in-go
 - Canais bidirecionals (send & receive)
     - send chan<-
-        error: "invalid operation: <-cs (receive from send-only type chan<- int)"
+        - error: "invalid operation: <-cs (receive from send-only type chan<- int)"
     - receive <-chan
-        error: "invalid operation: cr <- 42 (send to receive-only type <-chan int)"
+        - error: "invalid operation: cr <- 42 (send to receive-only type <-chan int)"
+- Exemplo: https://play.golang.org/p/TlcSm8bHkW
 - A seta sempre aponta para a esquerda.
 - Assignment/conversion: 
     - de geral para específico
     - de específico para geral não
-- Código: 
+    - Exemplos:
+        - geral pra específico: https://play.golang.org/p/H1uk4YGMBB
+        - específico pra específico: https://play.golang.org/p/8JkOnEi7-a 
+        - específico pra geral: https://play.golang.org/p/4sOKuQRHq7
+        - atribuição tipos !=: https://play.golang.org/p/bG7H6l03VQ 
 
 ### Utilizando canais
 
 - Em funcs podemos especificar:
     - receive channel
-        - Parâmetro receive channel: (c chan<- int)
+        - Parâmetro receive channel: (c <-chan int)
         - No scope dessa função, esse canal só recebe
         - Não podemos fechar um receive channel
     - send channel 
-        - Parâmetro send channel: (c <-chan int)
+        - Parâmetro send channel: (c chan<- int)
         - No scope dessa função, esse canal só envia
         - Podemos fechar um send channel
 - Exemplo: passando informação de uma função para outra.
-- Código: 
+- Código: https://play.golang.org/p/TlcSm8bHkW (replay)
 
-### Range
+### Range e close
 
 - Range:
     - gofunc com for loop com send e close(chan)
     - recebe com range chan
-- Código: 
+- Código: https://play.golang.org/p/_g5IEjSkh1
 
 ### Select
 
+- Select é como switch, só que pra canais, e não é sequencial.
+- "A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready." — https://tour.golang.org/concurrency/5
 - Na prática:
-    - gofunc send: for loop, pares vão pra pares<-, ímpares vão pra ímpares<-, acabou vai quit <- true
-    - func receive: select statement com canais como cases
-        - select é como switch, só que pra canais, e não é sequencial
-        - "A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready." — https://tour.golang.org/concurrency/5
-    - close? time.Sleep? 0, 0, 0?
-- Código: 
+    - Exemplo 1:
+        - Duas go funcs enviando X/2 numeros cada uma pra um canal
+        - For loop X valores, select case <-x
+    - Exemplo 2:
+        - Func 1 recebe X valores de canal, depois manda qualquer coisa pra chan quit
+        - Func 2 for infinito, select: case envia pra canal, case recebe de quit
+    - Exemplo 3:
+        - Chans par, ímpar, quit
+        - Func send manda números pares pra um canal, ímpares pra outro, e fecha/quit
+        - Func receive é um select entre os três canais, encerra no quit
+        - Problema!
+- Go Playground:
+    - 1. https://play.golang.org/p/xC3e1wBxgv
+    - 2. https://play.golang.org/p/_NZqhBXN-v
+    - 3. https://play.golang.org/p/rK8QwsBo0H
 
 ### A expressão comma ok
 
@@ -1863,7 +1888,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Na prática:
     - Documentação
     - ctx := context.Background
-    - ctx, cancel = context.WithCancel(context.Background)
+    - ctx, c ancel = context.WithCancel(context.Background)
     - goroutine: select case <-ctx.Done(): return; default: continua trabalhando.
     - check ctx.Err(); cancel(); check ctx.Err()
     - Tambem tem WithDeadline

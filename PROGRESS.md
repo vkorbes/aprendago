@@ -166,25 +166,25 @@
 | Instalando Go             | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Go workspace & env vars   | ☑ | ☑ | ☐ | ☐ | ☐ |
 | IDE's                     | ☑ | ☑ | ☐ | ☐ | ☐ |
-| Comandos Go               | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Repositórios no GitHub    | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Explorando o GitHub       | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Compilação cruzada        | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Pacotes                   | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Comandos Go               | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Repositórios no GitHub    | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Explorando o GitHub       | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Compilação cruzada        | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Pacotes                   | ☑ | ☑ | ☐ | ☐ | ☐ |
 | ***20 – Exercícios: Ninja Nível 9***
-| Na prática: exercício #1  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #2  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #3  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #4  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #5  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #6  | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Na prática: exercício #7  | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Na prática: exercício #1  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #2  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #3  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #4  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #5  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #6  | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Na prática: exercício #7  | ☑ | ☑ | ☐ | ☐ | ☐ |
 | ***21 – Canais***
-| Entendendo canais     | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Canais direcionais    | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Utilizando canais     | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Range                 | ☑ | ☐ | ☐ | ☐ | ☐ |
-| Select                | ☑ | ☐ | ☐ | ☐ | ☐ |
+| Entendendo canais     | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Canais direcionais    | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Utilizando canais     | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Range                 | ☑ | ☑ | ☐ | ☐ | ☐ |
+| Select                | ☑ | ☑ | ☐ | ☐ | ☐ |
 | A expressão comma ok  | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Convergência          | ☑ | ☐ | ☐ | ☐ | ☐ |
 | Divergência           | ☑ | ☐ | ☐ | ☐ | ☐ |
