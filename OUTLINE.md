@@ -2012,7 +2012,8 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 ### Recover
 
-- https://blog.golang.org/defer-panic-and-recover 
+- https://blog.golang.org/defer-panic-and-recover
+- https://golang.org/pkg/builtin/#recover
 - Exemplo: https://play.golang.org/p/ZocncqtwaK
 - Código: 
 
@@ -2042,21 +2043,20 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 - Utilizando este código: https://play.golang.org/p/9a1IAWy5E6
 - ...crie uma mensagem de erro customizada utilizando fmt.Errorf().
-- Solução: (https://play.golang.org/p/HugU4HJEEO)
+- Solução: 
 
 ### Na prática: exercício #3
 
 - Crie um struct "erroEspecial" que implemente a interface builtin.error. 
 - Crie uma função que tenha um valor do tipo error como parâmetro. 
 - Crie um valor do tipo "erroEspecial" e passe-o para a função da instrução anterior.
-- (Para acessar campos do struct: error.campo não existe, portanto: error.(erroEspecial).campo)
-- Solução: (https://play.golang.org/p/ixeowY2fd2)
+- Solução: 
 
 ### Na prática: exercício #4
 
 - Utilizando este código: https://play.golang.org/p/wlEM1tgfQD
 - ...use o struct sqrt.Error como valor do tipo erro.
-- Solução: (https://play.golang.org/p/nsRxbDfkCh)
+- Solução: 
 
 ### Na prática: exercício #5
 
