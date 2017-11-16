@@ -1870,30 +1870,57 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 ### Convergência
 
 - Observamos convergência quando informação de vários canais é enviada a um número menor de canais.
-- Notação <- <-
-- Na prática:
+- Interessante: <- <-
+- Na prática, exemplos:
+    - 1. Todd: 
+        - Canais par, ímpar, e converge. 
+        - Func send manda pares pra um, ímpares pro outro, depois fecha.
+        - Func receive cria duas go funcs, cada uma com um for range, enviando dados dos canais par e ímpar pro canal converge. Não esquecer de WGs!
+        - Por fim um range retira todas as informações do canal converge.
+    - 2. Rob Pike (palestra Go Concurrency Patterns):
+        - Func trabalho cria um canal, cria uma go func que manda dados pra esse canal, e retorna o canal. Interessante: time.Duration(rand.Intn(1e3))
+        - Func converge toma dois canais, cria um canal novo, e cria duas go funcs com for infinito que passa tudo para o canal novo. Retorna o canal novo.
+        - Por fim chamamos canal := converge(trabalho(nome1), trabalho(nome2)) e usamos um for para receber dados do canal var.
 - Código: 
 
 ### Divergência
 
 - Divergência é o contrário de convergência :)
-- Na prática:
+- Na prática, exemplos:
+    - 1. Um stream vira centenas de go funcs que depois convergem.
+        - Dois canais.
+        - Uma func manda X números ao primeiro canal.
+        - Outra func faz um range deste canal, e para cada ítem lança uma go func que poe o retorno de trabalho() no canal dois.
+        - Trabalho() é um timer aleatório pra simular workload.
+        - Por fim, range canal dois demonstra os valores.
+    - 2. Com throttling! Ou seja, com um número máximo de go funcs.
+        - Ídem acima, mas a func que lança go funcs é assim:
+        - Cria X go funcs, cada uma com um range no primeiro canal que, para cada item, poe o retorno de trabalho() no canal dois.
 - Código: 
 
 ### Context
 
 - Só pra ter uma idéia geral:
 - Se a gente lança 500 goroutines pra fazer uma tarefa, e cancelamos a tarefa no meio do caminho, como fazemos pra matar as goroutines?
-- https://blog.golang.org/context
-- Na prática:
-    - Documentação
+- Documentação: https://golang.org/pkg/context/
+- Aos aventureiros: https://blog.golang.org/context
+- Destaques:
     - ctx := context.Background
-    - ctx, c ancel = context.WithCancel(context.Background)
+    - ctx, cancel = context.WithCancel(context.Background)
     - goroutine: select case <-ctx.Done(): return; default: continua trabalhando.
-    - check ctx.Err(); cancel(); check ctx.Err()
-    - Tambem tem WithDeadline
-
-- Código: 
+    - check ctx.Err();
+    - Tambem tem WithDeadline/Timeout
+- Exemplos (Todd):
+    - Analisando:
+        - Background: https://play.golang.org/p/cByXyrxXUf 
+        - WithCancel: https://play.golang.org/p/XOknf0aSpx
+        - Função Cancel: https://play.golang.org/p/UzQxxhn_fm 
+    - Exemplos práticos:
+        - func WithCancel: https://play.golang.org/p/Lmbyn7bO7e
+        - func WithCancel: https://play.golang.org/p/wvGmvMzIMW 
+        - func WithDeadline: https://play.golang.org/p/Q6mVdQqYTt 
+        - func WithTimeout: https://play.golang.org/p/OuES9sP_yX 
+        - func WithValue: https://play.golang.org/p/8JDCGk1K4P 
 
 ## 22 – Exercícios: Ninja Nível 10
 
@@ -1903,42 +1930,43 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Faça esse código funcionar: https://play.golang.org/p/j-EA6003P0
     - Usando uma função anônima auto-executável
     - Usando buffer
-- Solução: 
+- Solução:
+    - 1. https://play.golang.org/p/MNqpJ29FZJ
+    - 2. https://play.golang.org/p/Y0Hx6IZc3U
 
 ### Na prática: exercício #2
 
 - Faça esse código funcionar: https://play.golang.org/p/oB-p3KMiH6
-- Faça esse código funcionar: https://play.golang.org/p/mgw750EPp4
-- Solução: 
+- Solução: https://play.golang.org/p/isnJ8hMMKg
 
 ### Na prática: exercício #3
 
 - Utilizando este código: https://play.golang.org/p/sfyu4Is3FG
 - ...use um for range loop para demonstrar os valores do canal.
-- Solução: 
+- Solução: https://play.golang.org/p/N2N6oN3f0b
 
 ### Na prática: exercício #4
 
 - Utilizando este código: https://play.golang.org/p/MvL6uamrJP
 - ...use um select statement para demonstrar os valores do canal.
-- Solução: 
+- Solução: https://play.golang.org/p/UeJweL3Ola
 
 ### Na prática: exercício #5
 
 - Utilizando este código: https://play.golang.org/p/YHOMV9NYKK
 - ...demonstre o comma ok idiom.
-- Solução: 
+- Solução: https://play.golang.org/p/qh2ywLB5OG
 
 ### Na prática: exercício #6
 
 - Escreva um programa que coloque 100 números em um canal, retire os números do canal, e demonstre-os.
-- Solução: 
+- Solução: /22-algumacoisa/06/main.go
 
 ### Na prática: exercício #7
 
 - Crie um programa que lance 10 goroutines onde cada uma envia 10 números a um canal;
 - Tire estes números do canal e demonstre-os.
-- Solução: 
+- Solução: /22-algumacoisa/07/main.go
 
 ## 23 – Tratamento de Erros
 
@@ -1946,18 +1974,23 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 - Para quem já programa em outras linguagens:
     - Em Go não temos exceções. → https://golang.org/doc/faq#exceptions
-    - Mais em: https://blog.golang.org/error-handling-and-go
+    - "We believe that coupling exceptions to a control structure, as in the try-catch-finally idiom, results in convoluted code."
+    - "Go's multi-value returns make it easy to report an error without overloading the return value. A canonical error type, coupled with Go's other features, makes error handling pleasant but quite different from that in other languages."
+    - Aventureiros: https://blog.golang.org/error-handling-and-go
+- É interessante criar o hábito de lidar com erros imediatamente, similar a e.g. defer close.
 - package builtin, type error interface
 - package errors
-- Código: 
 
 ### Verificando erros
 
-- Na minha religião, underscore é pecado. Verifique seus erros.
+- Na minha religião, underscore é pecado.
+- Verifique seus erros!
+- (Exceção: fmt.Println)
 - Na prática:
-    - Exemplo 1: os.Create → strings.NewReader → io.Copy
-    - Exemplo 2: os.Open → io.ReadAll
-- Código: 
+    - Exemplo 0: fmt.Println
+    - Exemplo 1: fmt.Scan(&var)
+    - Exemplo 2: os.Create → strings.NewReader → io.Copy
+    - Exemplo 3: os.Open → io.ReadAll
 
 ### Print & log
 
@@ -1967,9 +2000,15 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
     - log.Fatalln() → os.Exit(1) sem defer
     - log.Panicln() → println + panic → funcões em defer rodam; dá pra usar recover
     - panic()
-- Na prática: tentando abrir um arquivo inexistente e demonstrando todas as possibilidades acima.
 - Recomendação: use log.
 - Código: 
+    - 1. fmt.Println
+    - 2. log.Println
+    - 3. log.SetOutput
+    - 4. log.Fatalln
+    - 5. log.Panicln
+    - 6. panic
+- panic: http://godoc.org/builtin#panic
 
 ### Recover
 
@@ -1985,6 +2024,11 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
     - https://golang.org/pkg/builtin/#error
 - “Error values in Go aren’t special, they are just values like any other, and so you have the entire language at your disposal.” - Rob Pike
 - Código: 
+    - 1. errors.New
+    - 2. var errors.New
+    - 3. fmt.Errorf
+    - 4. var fmt.Errorf
+    - 5. type + method = error interface
 
 ## 24 – Exercícios: Ninja Nível 11
 
@@ -1998,7 +2042,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 - Utilizando este código: https://play.golang.org/p/9a1IAWy5E6
 - ...crie uma mensagem de erro customizada utilizando fmt.Errorf().
-- Solução: 
+- Solução: (https://play.golang.org/p/HugU4HJEEO)
 
 ### Na prática: exercício #3
 
@@ -2006,29 +2050,30 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Crie uma função que tenha um valor do tipo error como parâmetro. 
 - Crie um valor do tipo "erroEspecial" e passe-o para a função da instrução anterior.
 - (Para acessar campos do struct: error.campo não existe, portanto: error.(erroEspecial).campo)
-- Solução: 
+- Solução: (https://play.golang.org/p/ixeowY2fd2)
 
 ### Na prática: exercício #4
 
-- Utilizando este código: https://play.golang.org/p/wlEM1tgfQD REFAZER
+- Utilizando este código: https://play.golang.org/p/wlEM1tgfQD
 - ...use o struct sqrt.Error como valor do tipo erro.
-- Solução: 
+- Solução: (https://play.golang.org/p/nsRxbDfkCh)
 
 ### Na prática: exercício #5
 
 - Nos capítulos seguintes, uma das coisas que veremos é testes.
-- Desafio:
+- Para testar sua habilidade de se virar por conta própria... desafio:
     - Utilizando as seguintes fontes: https://godoc.org/testing & http://www.golang-book.com/books/intro/12
     - Tente descobrir por conta própria como funcionam testes em Go.
     - Pode usar tradutor automático, pode rodar código na sua máquina, pode procurar no Google. Vale tudo.
+    - O exercício é: crie um teste simples de uma função ou método ou pedaço qualquer de código.
 
 ## 25 – Escrevendo Documentação
 
 ### Introdução
 
 - Antes de escrever documentação, vamos ver como lê-la. Temos algumas possibilidades:
-    - godoc.org → documentação da standard library e outros
     - golang.org → documentação da standard library
+    - godoc.org → documentação da standard library e outros
     - go doc → comando para ler documentação na linha de comando
     - godoc → idem acima, para pode-se servir a documentação local via http
 
@@ -2109,7 +2154,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Testes devem:
     - ficar num arquivo cuja terminação seja _test.go
     - ficar na mesma package que o código a ser testado
-    - ficar em funções do tipo "func TestNome(*testing.T)"
+    - ficar em funções com nome "func TestNome(*testing.T)"
 - Para rodar os testes:
     - go test
     - go test -v
@@ -2128,7 +2173,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 ### Testes como exemplos
 
 - Outra maneira é fazer testes como exemplos.
-- Estes exemplos são os mesmo que aparecem na documentação.
+- Estes exemplos são os mesmos que aparecem na documentação.
 - Para exemplos o formato é "func ExampleFuncao()"
 - Deve haver um comentário "// Output: resultado", que é o que será testado
 - Para visualizar seu exemplo na documentação, fazemos o de sempre:
@@ -2164,7 +2209,7 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Na prática:
     - go test -cover
     - go test -coverprofile c.out
-    - go tool cover -html=c.out ← gera uma versão que você pode abrir no browser
+    - go tool cover -html=c.out ← abre no browser
     - go tool cover -h ← para mais detalhes
 
 ### Exemplos de benchmarks
@@ -2192,13 +2237,13 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 
 ### Na prática: exercício #1
 
-- Utilizando este código inicial:
+- Utilizando este código inicial: /go-aprenda-a-programar/28_exercicios-ninja-13/01/
 - Faça:
     - Testes
     - Benchmarks
     - Coverage
     - Veja o coverage no browser
-    - Exemplos, visíveis no browser
+    - Veja os exemplos, visíveis no browser
 - Solução: 
 
 ### Na prática: exercício #2
