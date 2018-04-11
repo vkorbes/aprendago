@@ -2,9 +2,36 @@
 
 ## 01 – Visão Geral do Curso
 
+### Bem-vindo!
+
+- Bem vindo ao curso!
+- Eu sou...
+- Nesse curso você vai aprender...
+- O curriculum que vamos estudar...
+- Para os novos na programação... Para os programadores experiences...
+- Participe!
+
 ### Por que Go?
 
-- 
+- Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Rober Griesemer.
+- Em 2006, não tinha uma linguagem de compilação rápida, execução rápida, e fácil de programar. É uma linguagem criada para resolver as questões de performance e complexidade.
+- Eficiente
+    - Standard library é déis
+    - Multiplataforma.
+    - Garbage collection
+- Fácil de usar
+    - É uma linguagem compilada, de tipagem forte e estática, 
+    - Tem pouquíssimas palavras reservadas, que vamos aprender todas no curso, ou seja, é muito de boas de aprender
+    - só sobe nas listas de popularidade
+- Em 2006, logo após o primeiro dual core. Thread: 1mb. Goroutine: 2kb.
+- massa
+- Quando usar Go? 
+    - Escala
+    - Seviços web, redes, servers
+    - Quando precisar de uma lingaugem rápida, simples, fácil de aprender, e fácil de usar.
+- Usa em: APIs, CLIs, microservices, libraries/framework, processamento de dados, ... É a base dos serviços de cloud e orquestração de containers.
+- Perguntar sobre empresas que usam Go no Brasil
+
 
 ### Sucesso
 
@@ -54,18 +81,20 @@
     - godoc.org
     - golang.org/doc/effective_go.html
 
-### Português vs. inglês
+### Como esse curso funciona
 
-- Obviamente esse é um curso em português.
-- Mas a língua semi-oficial da programação e do mundo da tecnologia em geral é a língua inglesa.
-- Por isso vamos utilizar bastante termos em inglês ao longo do curso.
-- As explicações serão em português, claro, mas quero que todos fiquem bem confortáveis com os termos em inglês.
-- Desta maneira você será auto-suficiente e poderá procurar por documentação e ajuda por toda a internet, não somente nos sites em português.
-- (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
-
-### Por trás do panos
-
-
+- Velocidade de playback.
+- Repetição.
+- Erros.
+- Português vs. inglês
+    - Obviamente esse é um curso em português.
+    - Mas a língua semi-oficial da programação e do mundo da tecnologia em geral é a língua inglesa.
+    - Por isso vamos utilizar bastante termos em inglês ao longo do curso.
+    - As explicações serão em português, claro, mas quero que todos fiquem bem confortáveis com os termos em inglês.
+    - Desta maneira você será auto-suficiente e poderá procurar por documentação e ajuda por toda a internet, não somente nos sites em português.
+    - (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
+- Constantemente "em progresso."
+- Seu feedback é super importante!
 
 ## 02 – Variáveis, Valores & Tipos
 
@@ -330,6 +359,12 @@
     - GORUNTIME
     - https://play.golang.org/p/1vp5DImIMM
 
+### Overflow
+
+- Um uint16, por exemplo, vai de 0 a 65535.
+- Que acontece se a gente tentar usar 65536?
+- Ou se a gente estiver em 65535 e tentar adicionar mais 1?
+- Playground: https://play.golang.org/p/t7Z4m127F2t
 
 ### Tipo string (cadeias de caracteres)
 
@@ -341,7 +376,7 @@
     - Raw string literals
     - Conversão para slice of bytes: []byte(x)
     - %#U, %#x
-    - Go Playground: https://play.golang.org/p/dt2x1ies5b
+    - Go Playground: https://play.golang.org/p/dt2x1ies5b & https://play.golang.org/p/PpDnspiyA_7
 - https://blog.golang.org/strings
 
 ### Sistemas numéricos
@@ -506,7 +541,7 @@
 - Operação módulo: %
 - For: break
 - For: continue
-- Go Playground: https://play.golang.org/p/gpKMP1wAEM
+- Go Playground: https://play.golang.org/p/gpKMP1wAEM & https://play.golang.org/p/8erMGEbZQix
 
 ### Loops: utilizando ascii
 
@@ -595,13 +630,13 @@
 
 - Crie um loop utilizando a sintaxe: for condition {}
 - Utilize-o para demonstrar os anos desde que você nasceu.
-- Solução: https://play.golang.org/p/PzUqGLODmW
+- Solução: https://play.golang.org/p/qnFjiDJzLor
 
 ### Na prática: exercício #4
 
 - Crie um loop utilizando a sintaxe: for {}
 - Utilize-o para demonstrar os anos desde que você nasceu.
-- Solução: https://play.golang.org/p/zCU9QWkzJ9
+- Solução: https://play.golang.org/p/dIbfdiuw0ms
 
 ### Na prática: exercício #5
 
@@ -901,7 +936,7 @@
 - Utilizando a solução anterior, coloque os valores do tipo "pessoa" num map, utilizando os sobrenomes como key.
 - Demonstre os valores do map utilizando range.
 - Os diferentes sabores devem ser demonstrados utilizando outro range, dentro do range anterior.
-- Solução: https://play.golang.org/p/TGoa54GmUe
+- Solução: https://play.golang.org/p/GLK11Q1_x8y
 
 ### Na prática: exercício #3
 
@@ -924,8 +959,8 @@
 
 - Crie e use um struct anônimo.
 - Desafio: dentro do struct tenha um valor de tipo map e outro do tipo slice.
-- Solução: https://play.golang.org/p/iTGLyH0Ijc
-https://play.golang.org/p/iTGLyH0Ijc
+- Solução: https://play.golang.org/p/iTGLyH0Ijc & https://play.golang.org/p/h247Kid5adG
+
 
 ## 12 – Funções
 
@@ -991,17 +1026,19 @@ https://play.golang.org/p/iTGLyH0Ijc
 - Declaração: keyword identifier type → type x interface
 - Após declarar a interface, deve-se definir os métodos necessários para implementar essa interface.
 - Se um tipo possuir todos os métodos necessários (que, no caso da interface{}, pode ser nenhum) então esse tipo implicitamente implementa a interface.
-- Esse tipo será o seu tipo *e tambem* o tipo da interface.
-- Em Go, valores podem ter mais que um tipo.
+- Esse tipo será o seu tipo *e também* o tipo da interface.
+
 - Exemplos:
     - Os tipos *profissão1* e *profissão2* contem o tipo *pessoa*
     - Cada um tem seu método *oibomdia()*, e podem dar oi utilizando *pessoa.oibomdia()*
     - Implementam a interface *gente*
-    - Ambos podem acessar o método *serhumano()* que chama o método *oibomdia()* de cada *gente*
+    - Ambos podem acessar o função *serhumano()* que chama o método *oibomdia()* de cada *gente*
     - Tambem podemos no método *serhumano()* tomar ações diferentes dependendo do tipo:
         switch pessoa.(type) { case profissão1: fmt.Println(h.(profissão1).valorquesóexisteemprofissão1) [...] }* 
     - Go Playground pré-pronto: https://play.golang.org/p/VLbo_1uE-U
-    - Go Playground ao vivo: https://play.golang.org/p/zGKr7cvTPF
+    https://play.golang.org/p/zGKr7cvTPF
+    - Go Playground ao vivo: 
+    https://play.golang.org/p/njiKbTT20Cr
 - Onde se utiliza?
     - Área de formas geométricas (gobyexample.com)
     - Sort
@@ -2187,15 +2224,13 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - go vet: correctness → procura constructs suspeitos
 - golint: suggestions → procura coding style ruim
 
-- Código: 
-
 ### Benchmark
 
 - Benchmarks nos permitem testar a velocidade ou performance do nosso código.
 - Na prática:
     - Arquivo: _test.go
     - BET: Testes, Exemplos e...
-    - func BenchmarkFunc (b *testing.B) { for i := < b.N; i++ { ... } }
+    - func BenchmarkFunc (b *testing.B) { for i := 0; i < b.N; i++ { ... } }
     - go test -bench . ← todos
     - go test -bench Func ← somente Func
 - go help testflag
