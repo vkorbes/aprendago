@@ -5,32 +5,42 @@
 ### Bem-vindo!
 
 - Bem vindo ao curso!
-- Eu sou...
+- Eu sou... 
+- Go foi criada por gente foda que criou o Unix, B, UTF-8...
+- Em 2006 o Google queria...
+- É uma linguagem que vem crescendo horrores...
 - Nesse curso você vai aprender...
 - O curriculum que vamos estudar...
-- Para os novos na programação... Para os programadores experiences...
+- Para os novos na programação... Para os programadores experientes...
 - Participe!
 
 ### Por que Go?
 
-- Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Rober Griesemer.
+- Antes de investir seu tempo em aprender a linguagem Go, é bom você entender por que isso é uma boa idéia.
+- O que estava acontecendo no Google...
+- Criada por Ken Thompson (Unix, B, C), Rob Pike (UTF-8), e Robert Griesemer.
 - Em 2006, não tinha uma linguagem de compilação rápida, execução rápida, e fácil de programar. É uma linguagem criada para resolver as questões de performance e complexidade.
+- https://golang.org/doc/faq#creating_a_new_language
 - Eficiente
     - Standard library é déis
     - Multiplataforma.
-    - Garbage collection
+    - Garbage collection (lightning fast!)
+    - Cross-compile.
 - Fácil de usar
     - É uma linguagem compilada, de tipagem forte e estática, 
     - Tem pouquíssimas palavras reservadas, que vamos aprender todas no curso, ou seja, é muito de boas de aprender
     - só sobe nas listas de popularidade
-- Em 2006, logo após o primeiro dual core. Thread: 1mb. Goroutine: 2kb.
-- massa
+- Killer feature: Em 2006, logo após o primeiro dual core. Thread: 1mb. Goroutine: 2kb.
+- É massa!
 - Quando usar Go? 
     - Escala
-    - Seviços web, redes, servers
+    - Seviços web, redes, servers (machine learning, image processing, crypto, ...)
     - Quando precisar de uma lingaugem rápida, simples, fácil de aprender, e fácil de usar.
 - Usa em: APIs, CLIs, microservices, libraries/framework, processamento de dados, ... É a base dos serviços de cloud e orquestração de containers.
-- Perguntar sobre empresas que usam Go no Brasil
+- Quem usa? https://github.com/golang/go/wiki/GoUsers
+- Go é OOP? https://golang.org/doc/faq#Is_Go_an_object-oriented_language
+- Mais um: https://golang.org/doc/faq#principles
+- $$$: https://insights.stackoverflow.com/survey/2017#technology-top-paying-technologies-by-region -> US
 
 
 ### Sucesso
@@ -51,7 +61,6 @@
     - Trabalhe. Invista as horas de esforço.
     - Faça exercício, coma direito, tenha uma atitude positiva.
     - Easy mode: pare de ver TV e use esse tempo pra estudar.
-
 - E algumas dicas práticas:
     - Metade das pessoas que assiste esse curso diz que eu falo muito rápido. A outra metade diz que eu falo muito devagar. Então use o botãozinho ali no player e selecione a velocidade mais apropriada pra você.
     - Boa parte de qualquer aprendizado se resume a memória muscular. Então quando eu passar exercícios, digite o código. Não copie e cole. Digite. E quando eu estiver programando "ao vivo," não passe pra frente, assista, e preste atenção. Se acostume com o processo, com o ato de programar.
@@ -61,9 +70,8 @@
 ### Recursos
 
 - Leia as descrições dos vídeos!
-    - Outline completo:
+    - Outline completo: https://github.com/ellenkorbes/go-aprenda-a-programar/blob/master/OUTLINE.md
 - Exercícios:
-
 - Comunidade: 
     - Slack: https://invite.slack.golangbridge.org/
     - #brazil
@@ -80,6 +88,8 @@
     - golang.org
     - godoc.org
     - golang.org/doc/effective_go.html
+- Podcast Go Time: https://changelog.com/gotime
+- Defective Go: https://www.youtube.com/channel/UC98qIvCCqd4fjOw1ks78SwA
 
 ### Como esse curso funciona
 
@@ -95,6 +105,10 @@
     - (Alem de que eu não sei e nem quero saber o nome em português de boa parte dessas coisas :P)
 - Constantemente "em progresso."
 - Seu feedback é super importante!
+
+### Work in progress!
+
+- Em construção!
 
 ## 02 – Variáveis, Valores & Tipos
 
@@ -1247,8 +1261,6 @@
 - Conjuntos de métodos são conjuntos de métodos :)
     - https://golang.org/ref/spec#Method_sets
 - "The method set of any other type T consists of all methods declared with receiver type T. The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T)."
-- Um receiver não-ponteiro recebe tanto ponteiros como não-ponteiros.
-- Um receiver ponteiro recebe somente ponteiros.
     - Documentação:
     - tipo (t T)    → receiver (t T)
     - tipo (t *T)   → receivers (t *T) ou (t T)
@@ -1258,17 +1270,11 @@
 - "The method set of a type determines the interfaces that the type implements [...]"
 - Exemplo: interfaces em gobyexample.com
 - Go Playground: 
-
-NON-POINTER RECEIVER & NON-POINTER VALUE
-https://play.golang.org/p/2ZU0QX12a8
-NON-POINTER RECEIVER & POINTER VALUE
-https://play.golang.org/p/glWZmm0gY6 
-POINTER RECEIVER & POINTER VALUE
-https://play.golang.org/p/pWFxsg6MSe 
-POINTER RECEIVER & NON-POINTER VALUE
-https://play.golang.org/p/G3lEy-4Mc8 ( code does not run )
-
-https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
+    - NON-POINTER RECEIVER & NON-POINTER VALUE → https://play.golang.org/p/2ZU0QX12a8
+    - NON-POINTER RECEIVER & POINTER VALUE → https://play.golang.org/p/glWZmm0gY6 
+    - POINTER RECEIVER & POINTER VALUE → https://play.golang.org/p/pWFxsg6MSe 
+    - POINTER RECEIVER & NON-POINTER VALUE → https://play.golang.org/p/G3lEy-4Mc8 (dá erro!)
+- Extra: https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
 
 ## 15 – Exercícios: Ninja Nível 7
 
@@ -1452,6 +1458,8 @@ https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-wait
 - Go Playground: https://play.golang.org/p/8iiqLX4sWc
 
 ### Conjuntos de métodos, parte 2
+
+- Mesma coisa de antes, mais: https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
 
 - Mas, mas...
 - Todos os métodos de WaitGroup tem ponteiros como receivers:
