@@ -70,7 +70,7 @@
 ### Recursos
 
 - Leia as descrições dos vídeos!
-    - Outline completo: https://github.com/ellenkorbes/go-aprenda-a-programar/blob/master/OUTLINE.md
+    - Outline completo: https://github.com/ellenkorbes/aprendago/blob/master/OUTLINE.md
 - Exercícios:
 - Comunidade: 
     - Slack: https://invite.slack.golangbridge.org/
