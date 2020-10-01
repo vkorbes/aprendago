@@ -1457,7 +1457,7 @@
     - time.Sleep(time.Second) vs. runtime.Gosched()
 - go help → go help build → go run -race main.go
 - Como resolver? Mutex.
-- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/05_race_condition/main.go
+- Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/05_race_condition/main.go
 
 ### Mutex
 
@@ -1469,14 +1469,14 @@
         - func (m *Mutex) Lock()
         - func (m *Mutex) Unlock()
 - RWMutex
-- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/06_mutex/main.go
+- Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/06_mutex/main.go
 
 ### Atomic
 
 - Agora vamos fazer a mesma coisa, mas com atomic ao invés de mutex.
     - atomic.AddInt64
     - atomic.LoadInt64
-- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/07_atomic/main.go
+- Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/07_atomic/main.go
 
 ## 19 – Seu Ambiente de Desenvolvimento
 
