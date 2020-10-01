@@ -1360,7 +1360,7 @@
     - CompareHashAndPassword
 - Sem Go Playground!
     - go get golang.org/x/crypto/bcrypt
-- Arquivo: 16_aplicacao/bcrypt/main.go
+- Arquivo: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/16_aplicacao/bcrypt/main.go
 
 ## 17 – Exercícios: Ninja Nível 8
 
@@ -1457,7 +1457,7 @@
     - time.Sleep(time.Second) vs. runtime.Gosched()
 - go help → go help build → go run -race main.go
 - Como resolver? Mutex.
-- Go Playground: 
+- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/05_race_condition/main.go
 
 ### Mutex
 
@@ -1469,14 +1469,14 @@
         - func (m *Mutex) Lock()
         - func (m *Mutex) Unlock()
 - RWMutex
-- Go Playground: 
+- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/06_mutex/main.go
 
 ### Atomic
 
 - Agora vamos fazer a mesma coisa, mas com atomic ao invés de mutex.
     - atomic.AddInt64
     - atomic.LoadInt64
-- Go Playground: 
+- Go Playground: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/18_concorrencia/07_atomic/main.go
 
 ## 19 – Seu Ambiente de Desenvolvimento
 
@@ -1626,7 +1626,7 @@
 - git push
 - git clone
 - go get
-- Arquivos: /19_seu-ambiente-de-desenvolvimento/compilacaocruzada/
+- Arquivos: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/19_seu-ambiente-de-desenvolvimento/compilacaocruzada
 
 ### Pacotes
 
@@ -1644,7 +1644,7 @@
         - Com maiúscula: exportado, visível fora do package
         - Com minúscula: não exportado, não utilizável fora do package
 - Artigo: https://rakyll.org/style-packages/
-- Exemplo: 
+- Exemplo: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/19_seu-ambiente-de-desenvolvimento/pacotes
 
 ## 20 – Exercícios: Ninja Nível 9
 
@@ -1654,8 +1654,8 @@
 - Cada goroutine adicional devem fazer um print separado.
 - Utilize waitgroups para fazer com que suas goroutines finalizem antes de o programa terminar.
 - Solução:
-    - 20_exercicios-ninja-9/01_moleza/main.go
-    - 20_exercicios-ninja-9/01_foda/main.go
+    - https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/01_foda/main_foda.go
+    - https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/01_moleza/main_moleza.go
 
 ### Na prática: exercício #2
 
@@ -1668,7 +1668,7 @@
         - Que você pode utilizar um valor do tipo "*pessoa" na função "dizerAlgumaCoisa"
         - Que você não pode utilizar um valor do tipo "pessoa" na função "dizerAlgumaCoisa"
 - Se precisar de dicas, veja: https://gobyexample.com/interfaces
-- Solução: 20_exercicios-ninja-9/02/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/02/main.go
 
 ### Na prática: exercício #3
 
@@ -1682,17 +1682,17 @@
         - Copiar o novo valor para a variável inicial
     - Utilize WaitGroups para que seu programa não finalize antes de suas goroutines.
     - Demonstre que há uma condição de corrida utilizando a flag -race
-- Solução: 20_exercicios-ninja-9/03/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/03/main.go
 
 ### Na prática: exercício #4
 
 - Utilize mutex para consertar a condição de corrida do exercício anterior.
-- Solução: 20_exercicios-ninja-9/04/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/04/main.go
 
 ### Na prática: exercício #5
 
 - Utilize atomic para consertar a condição de corrida do exercício #3.
-- Solução: 20_exercicios-ninja-9/05/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/05/main.go
 
 ### Na prática: exercício #6
 
@@ -1701,7 +1701,7 @@
     - go run
     - go build
     - go install
-- Solução: 20_exercicios-ninja-9/06/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/20_exercicios-ninja-9/06/main.go
 
 ### Na prática: exercício #7
 
@@ -1831,7 +1831,7 @@
 - Se receber valor: v, true
 - Canal fechado, nada, etc.: zero v, false
 - Agora vamos resolver o problema do exercício anterior usando comma ok.
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/21_canais/06_exerc%C3%ADcio_anterior/main.go
 
 ### Convergência
 
@@ -1847,7 +1847,7 @@
         - Func trabalho cria um canal, cria uma go func que manda dados pra esse canal, e retorna o canal. Interessante: time.Duration(rand.Intn(1e3))
         - Func converge toma dois canais, cria um canal novo, e cria duas go funcs com for infinito que passa tudo para o canal novo. Retorna o canal novo.
         - Por fim chamamos canal := converge(trabalho(nome1), trabalho(nome2)) e usamos um for para receber dados do canal var.
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/21_canais/07
 
 ### Divergência
 
@@ -1862,7 +1862,7 @@
     - 2. Com throttling! Ou seja, com um número máximo de go funcs.
         - Ídem acima, mas a func que lança go funcs é assim:
         - Cria X go funcs, cada uma com um range no primeiro canal que, para cada item, poe o retorno de trabalho() no canal dois.
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/21_canais/08
 
 ### Context
 
@@ -1926,13 +1926,13 @@
 ### Na prática: exercício #6
 
 - Escreva um programa que coloque 100 números em um canal, retire os números do canal, e demonstre-os.
-- Solução: /22-algumacoisa/06/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/22_exercicios-ninja-10/06/main.go
 
 ### Na prática: exercício #7
 
 - Crie um programa que lance 10 goroutines onde cada uma envia 10 números a um canal;
 - Tire estes números do canal e demonstre-os.
-- Solução: /22-algumacoisa/07/main.go
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/22_exercicios-ninja-10/07/main.go
 
 ## 23 – Tratamento de Erros
 
@@ -1957,6 +1957,7 @@
     - Exemplo 1: fmt.Scan(&var)
     - Exemplo 2: os.Create → strings.NewReader → io.Copy
     - Exemplo 3: os.Open → io.ReadAll
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/23_tratamento-de-erros/02_verificando-erros
 
 ### Print & log
 
@@ -1975,13 +1976,14 @@
     - 5. log.Panicln
     - 6. panic
 - panic: http://godoc.org/builtin#panic
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/23_tratamento-de-erros/03_print-e-log
 
 ### Recover
 
 - https://blog.golang.org/defer-panic-and-recover
 - https://golang.org/pkg/builtin/#recover
 - Exemplo: https://play.golang.org/p/ZocncqtwaK
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/23_tratamento-de-erros/04_recover/main.go
 
 ### Erros com informações adicionais
 
@@ -1996,6 +1998,7 @@
     - 3. fmt.Errorf
     - 4. var fmt.Errorf
     - 5. type + method = error interface
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/23_tratamento-de-erros/05_erros-com-informa%C3%A7%C3%B5es-adicionais
 
 ## 24 – Exercícios: Ninja Nível 11
 
@@ -2003,26 +2006,26 @@
 
 - Utilizando este código: https://play.golang.org/p/3W69TH4nON
 - ...remova o underscore e verifique e lide com o erro de maneira apropriada.
-- Solução: 
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/24_exercicios-ninja-11/01/main.go
 
 ### Na prática: exercício #2
 
 - Utilizando este código: https://play.golang.org/p/9a1IAWy5E6
 - ...crie uma mensagem de erro customizada utilizando fmt.Errorf().
-- Solução: 
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/24_exercicios-ninja-11/02/main.go
 
 ### Na prática: exercício #3
 
 - Crie um struct "erroEspecial" que implemente a interface builtin.error. 
 - Crie uma função que tenha um valor do tipo error como parâmetro. 
 - Crie um valor do tipo "erroEspecial" e passe-o para a função da instrução anterior.
-- Solução: 
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/24_exercicios-ninja-11/03/main.go
 
 ### Na prática: exercício #4
 
 - Utilizando este código: https://play.golang.org/p/wlEM1tgfQD
 - ...use o struct sqrt.Error como valor do tipo erro.
-- Solução: 
+- Solução: https://github.com/ellenkorbes/aprendago/blob/master/c%C3%B3digo/24_exercicios-ninja-11/04/main.go
 
 ### Na prática: exercício #5
 
@@ -2085,6 +2088,7 @@
     - Caso esteja escrevendo bastante documentação, utilize um arquivo doc.go. Exemplo: package fmt.
 - A melhor parte dessa abordagem minimalista é que é super fácil de usar. Como resultado, muita coisa em Go, incluindo toda a standard library, já segue estas convenções.
 - Outro exemplo: errors package.
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/25_escrevendo-documentacao
 
 ## 26 – Exercícios: Ninja Nível 12
 
@@ -2095,7 +2099,7 @@
     - Documente seu código com comentários, e utilize a função Idade na sua função main.
 - Rode seu programa para verificar se ele funciona.
 - Rode um local server com godoc e leia sua documentação.
-- Solução: 
+- Solução: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/26_exercicios-ninja-12/01_cachorro
 
 ### Na prática: exercício #2
 
@@ -2103,7 +2107,7 @@
 - Faça sua documentação aparecer em godoc.org, e tire um screenshot.
 - Delete seu código do GitHub.
 - Faça um refresh em godoc.org e veja se seu código sumiu.
-- Me mostre no twitter (@ellenkorbes) seu screenshot!
+- Compartilhe seu exercício aqui: https://github.com/ellenkorbes/aprendago/issues/79
 
 ### Na prática: exercício #3
 
@@ -2125,7 +2129,7 @@
     - go test
     - go test -v
 - Para falhas, utilizamos t.Error(), onde a maneira idiomática é algo do tipo "expected: x. got: y."
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/27_testes-e-benchmarking/01_introducao
 
 ### Testes em tabela
 
@@ -2134,7 +2138,6 @@
     - struct test, fields: data []int, answer int
     - tests := []test{[]int{}, int}
     - range tests
-- Código: 
 
 ### Testes como exemplos
 
@@ -2163,7 +2166,7 @@
     - go test -bench . ← todos
     - go test -bench Func ← somente Func
 - go help testflag
-- Código: 
+- Código: https://github.com/ellenkorbes/aprendago/tree/master/c%C3%B3digo/27_testes-e-benchmarking/benchtest
 
 ### Cobertura
 
