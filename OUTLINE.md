@@ -583,12 +583,6 @@
 - If, else if, else if, ..., else.
 - Go Playground: https://play.golang.org/p/18VrRX2pec
 
-### Loops, condicionais, e operação módulo
-
-- Revisão:
-- For + condicionais + módulo
-- Números múltiplos de x
-
 ### Condicionais: a declaração switch
 
 - Switch:
@@ -1256,26 +1250,6 @@
     - x := 0; funçãoquemudaovalordo*argumentopra1(&x); Print(x)
 - Go Playground: https://play.golang.org/p/VZmfWfw76s
 
-### Conjuntos de métodos
-
-- Conjuntos de métodos são conjuntos de métodos :)
-    - https://golang.org/ref/spec#Method_sets
-- "The method set of any other type T consists of all methods declared with receiver type T. The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T)."
-    - Documentação:
-    - tipo (t T)    → receiver (t T)
-    - tipo (t *T)   → receivers (t *T) ou (t T)
-    - Ou seja:
-    - receiver (t T)  ← tipos (t T) ou (t *T)
-    - receiver (t *T) ← tipo (t *T)
-- "The method set of a type determines the interfaces that the type implements [...]"
-- Exemplo: interfaces em gobyexample.com
-- Go Playground: 
-    - NON-POINTER RECEIVER & NON-POINTER VALUE → https://play.golang.org/p/2ZU0QX12a8
-    - NON-POINTER RECEIVER & POINTER VALUE → https://play.golang.org/p/glWZmm0gY6 
-    - POINTER RECEIVER & POINTER VALUE → https://play.golang.org/p/pWFxsg6MSe 
-    - POINTER RECEIVER & NON-POINTER VALUE → https://play.golang.org/p/G3lEy-4Mc8 (dá erro!)
-- Extra: https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
-
 ## 15 – Exercícios: Ninja Nível 7
 
 ### Na prática: exercício #1
@@ -1457,42 +1431,7 @@
 - Só pra ver: runtime.NumCPU() & runtime.NumGoroutine()
 - Go Playground: https://play.golang.org/p/8iiqLX4sWc
 
-### Conjuntos de métodos, parte 2
-
-- Mesma coisa de antes, mais: https://stackoverflow.com/questions/42477951/what-is-the-method-set-of-sync-waitgroup
-
-- Mas, mas...
-- Todos os métodos de WaitGroup tem ponteiros como receivers:
-    - type WaitGroup
-        - func (wg *WaitGroup) Add(delta int)
-        - func (wg *WaitGroup) Done()
-        - func (wg *WaitGroup) Wait()
-    - Então como é que usamos "var wg sync.WaitGroup"? Não deveria ser "var wg *sync.WaitGroup"?
-    - Como é que o jeito que usamos funciona?
-
-- Só pra reiterar:
-    - "The method set of any other type T consists of all methods declared with receiver type T. The method set of the corresponding pointer type *T is the set of all methods declared with receiver *T or T (that is, it also contains the method set of T)." — https://golang.org/ref/spec#Method_sets
-    - Um receiver não-ponteiro recebe tanto ponteiros como não-ponteiros.
-    - Um receiver ponteiro recebe somente ponteiros.
-        - Documentação:
-        - tipo (t T)    → receiver (t T)
-        - tipo (t *T)   → receivers (t *T) ou (t T)
-        - Ou seja:
-        - receiver (t T)  ← tipos (t T) ou (t *T)
-        - receiver (t *T) ← tipo (t *T)
-
-- Então?
-    - "The method set of a type determines the interfaces that the type implements [...]"
-    - Realmente sync.WaitGroup não possui métodos:
-        - wg := sync.WaitGroup{}; fmt.Println(reflect.TypeOf(wg).NumMethod()) → 0
-    - Enquanto que:
-        - wg := sync.WaitGroup{}; fmt.Println(reflect.TypeOf(&wg).NumMethod()) → 3
-    - E como que "var wg sync.WaitGroup; wg.Add(1)" funciona então?
-    - "If x is addressable and &x's method set contains m, x.m() is shorthand for (&x).m()." — https://golang.org/ref/spec#Calls
-
-- Go Playground: 
-
-### Documentação
+### Discussão: Condição de corrida
 
 - Agora vamos dar um mergulho na documentação:
     - https://golang.org/doc/effective_go.html#concurrency
@@ -1577,21 +1516,6 @@
     - grep
         - cat temp2.txt | grep enter
         - ls | grep -i documents
-
-
-### Bash no Windows
-
-- Opção 1:
-    - https://msdn.microsoft.com/en-us/commandline/wsl/install_guide
-- Opção 2:
-    - https://git-scm.com/
-
-### Instalando Go
-
-- golang.org → download → checksum (shasum -a 256 /file.ext)
-    - go version
-    - go env
-    - go help
 
 ### Go workspace & environment variables
 
@@ -1840,7 +1764,7 @@
     - Buffer block: https://play.golang.org/p/smeW6vigAT
     - Mais buffer: https://play.golang.org/p/Pe2pcboGiA
 
-### Canais direcionais
+### Canais direcionais & utilizando canais
 
 - Canais podem ser direcionais.
 - E isso serve pra...?
@@ -1861,9 +1785,6 @@
         - específico pra específico: https://play.golang.org/p/8JkOnEi7-a 
         - específico pra geral: https://play.golang.org/p/4sOKuQRHq7
         - atribuição tipos !=: https://play.golang.org/p/bG7H6l03VQ 
-
-### Utilizando canais
-
 - Em funcs podemos especificar:
     - receive channel
         - Parâmetro receive channel: (c <-chan int)
@@ -2112,7 +2033,7 @@
     - Pode usar tradutor automático, pode rodar código na sua máquina, pode procurar no Google. Vale tudo.
     - O exercício é: crie um teste simples de uma função ou método ou pedaço qualquer de código.
 
-## 25 – Escrevendo Documentação
+## 25 – Documentação
 
 ### Introdução
 
@@ -2226,7 +2147,7 @@
 - Tanto para testes quanto para exemplos podemos utilizar: go test ./...
 - Mais: https://blog.golang.org/examples 
 
-### Golint
+### go fmt, govet e golint
 
 - gofmt: formata o código
 - go vet: correctness → procura constructs suspeitos
@@ -2254,80 +2175,3 @@
     - go test -coverprofile c.out
     - go tool cover -html=c.out ← abre no browser
     - go tool cover -h ← para mais detalhes
-
-### Exemplos de benchmarks
-
-- strings.Split → for range s + " " vs. string.Join
-- Analizando a diferença.
-- Código:
-
-### Revisão
-
-- Aqui vamos refazer um exemplo completo do que vimos até agora.
-    - Testes
-    - Exemplos
-    - Benchmarks
-    - godoc -http :8080 
-    - go test 
-    - go test -bench . 
-    - go test -cover 
-    - go test -coverprofile c.out 
-    - go tool cover -html=c.out
-
-- Código: 
-
-## 28 – Exercícios: Ninja Nível 13
-
-### Na prática: exercício #1
-
-- Utilizando este código inicial: /go-aprenda-a-programar/28_exercicios-ninja-13/01/
-- Faça:
-    - Testes
-    - Benchmarks
-    - Coverage
-    - Veja o coverage no browser
-    - Veja os exemplos, visíveis no browser
-- Solução: 
-
-### Na prática: exercício #2
-
-- No código inicial temos uma função que conta quantas vezes cada palavra foi usada em um texto, e outra função em branco que deverá contar quantas palavras o texto tem.
-- Escreva o código para a função em branco.
-- Para sua função, faça:
-    - Testes
-    - Benchmarks
-    - Coverage
-    - Veja o coverage no browser
-    - Documentação
-    - Exemplos, visíveis no browser
-- Desafio:
-    - Faça tudo isso tambem para a função pré-pronta.
-- Solução: 
-
-### Na prática: exercício #3
-
-- No código inicial temos uma função que retorna a média de todos os valores em uma slice []int.
-- Faça o mesmo que nos execícios anteriores, desta vez incluindo table tests.
-- Solução: 
-
-## 29 – Considerações Finais
-
-- Parabéns! O que você fez chegando aqui é fantástico. Seu aprendizado serve não somente para melhorar sua própria vida, mas para melhorar o mundo ao seu redor. As habilidades que você aprendeu aqui estão entre as mais requisitadas dos nossos tempos, e seu potencial para contribuir à sociedade é cada vez mais significativo.
-
-- Me siga no twitter! (@ellenkorbes)
-- Veja meu curso sobre Web Development usando Go.
-- Livros:
-    - A Linguagem de Programação Go (Alan Donovan, Brian Kernighan): https://www.amazon.com.br/dp/8575225464/
-    - Go em Ação (William Kennedy, Brian Ketelsen, Erik St. Martin): https://www.amazon.com.br/dp/8575225065/
-    - Introdução à Linguagem Go (Caleb Doxsey): https://www.amazon.com.br/dp/8575224891/
-- Comunidade: 
-    - Slack: https://invite.slack.golangbridge.org/
-    - #brazil
-    - #brazilian-go-studies, toda quinta às 22h!
-        - gravações em: https://www.youtube.com/cesargimenes
-- Outros:
-    - Exercism: http://exercism.io/languages/go/
-    - JustForFunc: https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw
-    - gobyexample.com
-    - forum.golangbridge.org
-    - stackoverflow.com/questions/tagged/go
