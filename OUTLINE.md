@@ -450,8 +450,8 @@
     - !=
     - <=
     - <
-    - >=
-    - >
+    - \>=
+    - \>
 - Demonstre estes valores.
 - Solução: https://play.golang.org/p/BMYEch6_s8
 
