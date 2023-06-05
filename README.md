@@ -1,10 +1,10 @@
-# Go: Aprenda a Programar com a Linguagem do Google
+# [Go: Aprenda a Programar com a Linguagem do Google](https://www.youtube.com/@AprendaGo "YouTube Channel")
 
-01 - Visão Geral do Curso
+[01 - Visão Geral do Curso](https://www.youtube.com/watch?v=WiGU_ZB-u0w&t=5s)
 
-02 - Variáveis, Valores & tipos
+[02 - Variáveis, Valores & tipos](https://www.youtube.com/watch?v=jXA0O5b-F1g)
 
-03 - Exercícios: Ninja Nível 1
+[03 - Exercícios: Ninja Nível 1](https://www.youtube.com/watch?v=CvH9fC2eYO8&t=11s)
 
 04 - Fundamentos da Programação
 
